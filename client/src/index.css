@@ -3,3 +3,10 @@
 html {
     scroll-behavior: smooth;
 }
+
+
+@theme{
+    --color-primary: #0a192f;
+    --color-secondary: #64ffda;
+    --color-accent: #ccd6f6;
+}

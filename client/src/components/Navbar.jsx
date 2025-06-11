@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 import NavLinks from './nav/NavLinks';
 
-export default function Navbar() {
-
+const Navbar = () => {
 
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -62,3 +61,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default Navbar
