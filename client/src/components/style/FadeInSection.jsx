@@ -27,9 +27,13 @@ const FadeInSection = ({ children, delay = 300, duration = 1000 }) => {
     return (
         <div
             ref={ref}
-            className={`transition-all delay-${delay} duration-${duration} ease-out 
-                ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
-                `}
+
+            style={{
+                transition: `all ${duration}ms ease-out ${delay}ms`,
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translateY(0)' : 'translateY(-2rem)',
+            }}
+
         >
             {children}
         </div>

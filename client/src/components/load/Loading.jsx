@@ -5,12 +5,15 @@ const Loading = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const timer = setTimeout(() => setLoading(false), 2000)
+        const timer = setTimeout(() => setLoading(false), 2500)
         return () => clearTimeout(timer)
     }, [])
     return (
         loading
-            ? <LoaderBLetter />
+            ?
+            <div className='h-screen bg-primary flex items-center justify-center'>
+                <LoaderBLetter />
+            </div>
             :
             < div >
                 {children}

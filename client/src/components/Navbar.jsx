@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, forwardRef } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 import NavLinks from './nav/NavLinks';
+import MainIcon from './icons/MainIcon';
+import FadeIn from './style/FadeIn';
 
-const Navbar = () => {
-
+const Navbar = forwardRef((props, ref) => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,22 +26,23 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
-
   return (
-
     <nav
+      ref={ref}
       className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500 
         ${show
           ? 'translate-y-0 pointer-events-auto'
           : '-translate-y-full pointer-events-none'
-        } bg-[#0f172a]/25 backdrop-blur-md`}
+        } bg-primary/25 backdrop-blur-md`}
     >
+      <div className="mx-auto px-2 py-1 flex justify-between items-center">
+        {/* <h1 className="text-xl font-bold">MySite</h1> */}
 
-      <div className="mx-auto px-4 py-6 flex justify-between items-center">
-        <h1 className="text-xl font-bold">MySite</h1>
-
-        {/* Desktop Menu */}
-        <NavLinks />
+        <FadeIn className={'flex w-full justify-between items-center'}>
+          <MainIcon />
+          {/* Desktop Menu */}
+          <NavLinks />
+        </FadeIn>
 
         {/* Mobile Menu Button */}
         <button
@@ -60,6 +62,9 @@ const Navbar = () => {
       )}
     </nav>
   );
-}
+});
 
-export default Navbar
+// Add display name for debugging
+Navbar.displayName = 'Navbar';
+
+export default Navbar;

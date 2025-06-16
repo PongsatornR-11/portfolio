@@ -7,26 +7,36 @@ import Contacts from '../components/Contacts'
 
 const Home = () => {
   const numbers = [1, 2, 3, 4, 5]
+  const components = [
+    {id: 'about', element: <About />},
+    {id: 'contacts', element: <Contacts />},
+    {id: 'mailto', element: <MailTo email={'pongsatorn.rk@gmail.com'} />},
+  ]
   return (
-    <div className='min-h-screen'>
+    <div className='min-h-screen flex flex-col mx-auto'>
       <section id='about' className='h-screen'>
         <img src="/mountain-3.jpg" alt="" />
-        <Contacts />
-        <div className='grid grid-cols-4 gap-2'>
-          {
-            numbers.map((num, i) => {
-              return (
-                <FadeIn delay={i * 500} duration={500}>
-                  <div className='border p-2 m-3 rounded-md text-accent'>{num}</div>
-                </FadeIn>
-              )
-            })
-          }
-        </div>
-      </section>
 
-      <MailTo email={'pongsatorn.rk@gmail.com'} />
-      <About />
+        {
+          numbers.map((num, i) => {
+            return (
+              <FadeIn delay={i * 500} duration={500}>
+                <div className='border p-2 m-3 rounded-md text-accent'>{num}</div>
+              </FadeIn>
+            )
+          })
+        }
+      </section>
+      
+      {
+        components.map(({id, element} , index)=>{
+          return(
+            <FadeIn key={id} delay={index * 500} duration={500}>
+              {element}
+            </FadeIn>
+          )
+        })
+      }
 
       {/* <section id="about" className="h-screen flex items-center justify-center border text-white">
         about

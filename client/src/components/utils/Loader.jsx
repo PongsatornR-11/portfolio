@@ -54,16 +54,10 @@ export function LoaderBLetter() {
     <svg width="250" height="400" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       {/* <path id="letterB" d="M20,10 L20,90 Q50,90 50,70 Q50,50 20,50 Q50,50 50,30 Q50,10 20,10 Z" */}
       <path id="letterB" d="M 20 31 L 20 71 Q 44 71 44 61 Q 44 52 34 52 Q 40 52 40 42 Q 40 31 28 31 Z"
-        fill="none" stroke="black" stroke-width="2"
+        fill="none" stroke="var(--color-secondary)" stroke-width="2"
         stroke-dasharray="150" stroke-dashoffset="150">
         <animate attributeName="stroke-dashoffset" from="150" to="0" dur="2s" fill="freeze" />
       </path>
     </svg>
-    // <div className='rotate-45'>
-    
-
-    // // </div>
-
-
   )
 }
