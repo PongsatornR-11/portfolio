@@ -1,39 +1,41 @@
 
 import React from 'react'
 import FadeIn from '../components/style/FadeIn'
-import MailTo from '../components/MailTo'
+
+import MailTo from '../components/utils/MailTo_old'
+import Contacts from '../components/utils/Contacts_old'
+
+import FadeInScroll from '../components/style/FadeInScroll'
+
 import About from '../components/About'
-import Contacts from '../components/Contacts'
+import Experience from '../components/Experience'
+import Projects from '../components/Projects'
+import ContactSection from '../components/ContactSection'
+import ContactFix from '../components/utils/ContactFix'
 
 const Home = () => {
-  const numbers = [1, 2, 3, 4, 5]
-  const components = [
-    {id: 'about', element: <About />},
-    {id: 'contacts', element: <Contacts />},
-    {id: 'mailto', element: <MailTo email={'pongsatorn.rk@gmail.com'} />},
+
+  const Sections = [
+    { id: 'about', element: <About /> },
+    { id: 'experience', element: <Experience /> },
+    { id: 'projects', element: <Projects /> },
+    { id: 'contact', element: <ContactSection /> },
   ]
   return (
-    <div className='min-h-screen flex flex-col mx-auto'>
-      <section id='about' className='h-screen'>
+    <div className='flex flex-col mx-auto'>
+      <section id='hero' className='h-screen'>
         <img src="/mountain-3.jpg" alt="" />
-
-        {
-          numbers.map((num, i) => {
-            return (
-              <FadeIn delay={i * 500} duration={500}>
-                <div className='border p-2 m-3 rounded-md text-accent'>{num}</div>
-              </FadeIn>
-            )
-          })
-        }
       </section>
-      
+
+      <ContactFix />
       {
-        components.map(({id, element} , index)=>{
-          return(
-            <FadeIn key={id} delay={index * 500} duration={500}>
-              {element}
-            </FadeIn>
+        Sections.map((section, index) => {
+          return (
+            <FadeInScroll key={index}>
+              <section id={section.id}>
+                {section.element}
+              </section>
+            </FadeInScroll>
           )
         })
       }

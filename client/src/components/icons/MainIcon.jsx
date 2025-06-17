@@ -3,7 +3,7 @@ import Button from '../utils/Button'
 
 const MainIcon = () => {
     return (
-        <Button>
+        <Button className={'border m-'}>
 
             <svg width="100" height="60" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg">
                 {/* <!-- Horizontal Hexagon --> */}

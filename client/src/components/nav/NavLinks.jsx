@@ -32,7 +32,7 @@ const NavLinks = ({ isMobile = false }) => {
                                     {section.name}
                                 </div>
                             </a>
-                        : <Button>Resume</Button>
+                        : <Button className={'py-2 px-4 border rounded-md'}>Resume</Button>
                     }
                 </FadeIn>
             )

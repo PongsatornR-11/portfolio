@@ -14,14 +14,14 @@ const Layout = () => {
         }
     }, [])
     return (
-        <Loading>
+        // <Loading>
             <div className='bg-primary'>
                 <Navbar ref={navbarRef} />
                 <main style={{ paddingTop: `${navbarHeight}px` }}>
                     <Outlet />
                 </main>
             </div>
-        </Loading>
+        // </Loading>
     )
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 
-const FadeInSection = ({ children, delay = 300, duration = 1000 }) => {
+const FadeInScroll = ({ children, delay = 300, duration = 1000 }) => {
 
     const ref = useRef(null);
     const [isVisible, setIsVisible] = useState(false)
@@ -40,4 +40,4 @@ const FadeInSection = ({ children, delay = 300, duration = 1000 }) => {
     )
 }
 
-export default FadeInSection
+export default FadeInScroll

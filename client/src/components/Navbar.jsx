@@ -1,7 +1,9 @@
 import { useState, useEffect, forwardRef } from 'react';
-import { HiMenu, HiX } from 'react-icons/hi';
+import { Atom, X, AlignJustify } from 'lucide-react'
+import Button from './utils/Button';
 import NavLinks from './nav/NavLinks';
 import MainIcon from './icons/MainIcon';
+
 import FadeIn from './style/FadeIn';
 
 const Navbar = forwardRef((props, ref) => {
@@ -9,6 +11,7 @@ const Navbar = forwardRef((props, ref) => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const [showNavLinks, setShowNavLinks] = useState(false)
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -26,6 +29,7 @@ const Navbar = forwardRef((props, ref) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
 
+
   return (
     <nav
       ref={ref}
@@ -36,13 +40,26 @@ const Navbar = forwardRef((props, ref) => {
         } bg-primary/25 backdrop-blur-md`}
     >
       <div className="mx-auto px-2 py-1 flex justify-between items-center">
-        {/* <h1 className="text-xl font-bold">MySite</h1> */}
 
-        <FadeIn className={'flex w-full justify-between items-center'}>
-          <MainIcon />
-          {/* Desktop Menu */}
-          <NavLinks />
+        <FadeIn
+          delay={0}
+          duration={500}
+          onFadeInComplete={() => setShowNavLinks(true)}
+        >
+          {/* <MainIcon /> */}
+          <Button className={'rounded-md p-1'}>
+            <Atom size={60} />
+          </Button>
         </FadeIn>
+
+        {/*  Desktop Menu */}
+        {
+          showNavLinks && (
+            <FadeIn delay={0} duration={500}>
+              <NavLinks />
+            </FadeIn>
+          )
+        }
 
         {/* Mobile Menu Button */}
         <button
@@ -50,7 +67,7 @@ const Navbar = forwardRef((props, ref) => {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >
-          {menuOpen ? <HiX /> : <HiMenu />}
+          {menuOpen ? <X /> : <AlignJustify />}
         </button>
       </div>
 
