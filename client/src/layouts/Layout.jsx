@@ -15,12 +15,12 @@ const Layout = () => {
     }, [])
     return (
         // <Loading>
-            <div className='bg-primary'>
-                <Navbar ref={navbarRef} />
-                <main style={{ paddingTop: `${navbarHeight}px` }}>
-                    <Outlet />
-                </main>
-            </div>
+        <div >
+            <Navbar ref={navbarRef} />
+            <main className='flex bg-primary' style={{ paddingTop: `${navbarHeight}px` }}>
+                <Outlet />
+            </main>
+        </div>
         // </Loading>
     )
 }

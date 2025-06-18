@@ -1,17 +1,16 @@
 
 import React from 'react'
-import FadeIn from '../components/style/FadeIn'
 
-import MailTo from '../components/utils/MailTo_old'
-import Contacts from '../components/utils/Contacts_old'
+import Hero from '../components/Hero'
 
 import FadeInScroll from '../components/style/FadeInScroll'
-
 import About from '../components/About'
 import Experience from '../components/Experience'
 import Projects from '../components/Projects'
 import ContactSection from '../components/ContactSection'
 import ContactFix from '../components/utils/ContactFix'
+import MailtoFix from '../components/utils/MailtoFix'
+
 
 const Home = () => {
 
@@ -22,12 +21,14 @@ const Home = () => {
     { id: 'contact', element: <ContactSection /> },
   ]
   return (
-    <div className='flex flex-col mx-auto'>
-      <section id='hero' className='h-screen'>
-        <img src="/mountain-3.jpg" alt="" />
+    <div className='flex flex-col mx-auto '>
+      <section id='hero' className='flex items-center justify-center'>
+        <Hero />
       </section>
 
-      <ContactFix />
+      <div className='bg-secondary opacity-30 hover:opacity-100 transition-opacity duration-300'>
+        <img src='/mountain-3.jpg' className='w-full h-full object-cover' />
+      </div>
       {
         Sections.map((section, index) => {
           return (
@@ -40,24 +41,12 @@ const Home = () => {
         })
       }
 
-      {/* <section id="about" className="h-screen flex items-center justify-center border text-white">
-        about
-      </section> */}
-      {/* <section id="experience" className="h-screen flex items-center justify-center border text-white">experience</section>
-      <section id="projects" className="h-screen flex items-center justify-center border text-white">projects</section>
-      <section id="contact" className="h-screen flex items-center justify-center border text-white">contact</section> */}
-
+      <ContactFix />
+      <MailtoFix email={'pongsatorn.rk@gmail.com'} />
 
       {/* inspried : https://v3.brittanychiang.com/ */}
       {/* inspried : https://v4.brittanychiang.com/ */}
       {/* inspried : https://brittanychiang.com/ */}
-      {/* pending
-      0. scroll to each section > done
-      1. hero loading webpage 
-      2. slowly showing up component 
-      https://reactcommunity.org/react-transition-group/css-transition
-      https://yqnn.github.io/svg-path-editor/ 
-      */}
     </div>
   )
 }

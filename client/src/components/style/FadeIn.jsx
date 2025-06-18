@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const FadeIn = ({ children, delay = 0, duration = 500, className, onFadeInComplete }) => {
+const FadeIn = ({ children, delay = 0, duration = 500, className, translateY= '-1rem', onFadeInComplete }) => {
     const [isVisible, setIsVisible] = useState(false)
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const FadeIn = ({ children, delay = 0, duration = 500, className, onFadeInComple
             style={{
                 transition: `all ${duration}ms ease-out`,
                 opacity: isVisible ? 1 : 0,
-                transform: isVisible ? 'translateY(0)' : 'translateY(-1rem)'
+                transform: isVisible ? 'translateY(0)' : `translateY(${translateY})`
             }}
             className={`${className}`}
         >

@@ -23,7 +23,7 @@ const NavLinks = ({ isMobile = false }) => {
                         section.name != 'Resume' ?
                             <a href={section.href}>
                                 <div key={index}
-                                    className='p-1 font-mono text-accent rounded-md 
+                                    className='p-1 text-sm font-mono text-accent rounded-md 
                             hover:text-secondary transition duration-300 ease-out hover:-translate-1 hover:shadow-[4px_4px_1px_rgba(100,255,218,1)]'
                                 >
                                     <span className="text-accent">
