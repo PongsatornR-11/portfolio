@@ -22,13 +22,8 @@ const Home = () => {
   ]
   return (
     <div className='flex flex-col mx-auto '>
-      <section id='hero' className='flex items-center justify-center'>
         <Hero />
-      </section>
 
-      <div className='bg-secondary opacity-30 hover:opacity-100 transition-opacity duration-300'>
-        <img src='/mountain-3.jpg' className='w-full h-full object-cover' />
-      </div>
       {
         Sections.map((section, index) => {
           return (

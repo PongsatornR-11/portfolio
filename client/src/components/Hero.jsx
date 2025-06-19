@@ -12,13 +12,13 @@ const Hero = () => {
         },
         {
             name: 'MainHeading',
-            element: <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent leading-tight mb-4">
+            element: <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-accent leading-tight mb-4">
                 Bass, Pongsatorn
             </h1>
         },
         {
             name: 'Quote',
-            element: <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-500 leading-tight mb-8">
+            element: <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-500 leading-tight mb-8">
                 I build things for the web.
             </h2>
         },
@@ -35,17 +35,17 @@ const Hero = () => {
         },
         {
             name: 'Button',
-            element: <Button className="border-2 border-secondary text-secondary px-8 py-4 rounded-md text-lg font-mono hover:bg-opacity-10 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50">
+            element:
                 <a href='#projects'>
-                    Check out my Projects!
+                    <Button className="border-2 border-secondary text-secondary px-8 py-4 rounded-md text-lg font-mono hover:bg-opacity-10 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50">
+                        Check out my Projects!
+                    </Button>
                 </a>
-            </Button>
         }
-
     ]
     return (
-        <section>
-            <div className="max-w-3xl mx-auto text-left py-12 px-6 sm:px-8 lg:px-12">
+        <section className='md:mx-14 pt-4 mx-8 h-screen'>
+            <div className="max-w-5xl mx-auto text-left py-4 px-6 sm:px-4 lg:px-10">
                 {
                     heroComponents.map((heroComponent, index) => {
                         return (
