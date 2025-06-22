@@ -37,7 +37,7 @@ const Navbar = forwardRef((props, ref) => {
         ${show
           ? 'translate-y-0 pointer-events-auto'
           : '-translate-y-full pointer-events-none'
-        } bg-primary/25 backdrop-blur-md`}
+        } bg-primary/25 backdrop-blur-md shadow-xl`}
     >
       <div className="mx-auto px-2 py-1 flex justify-between items-center">
 

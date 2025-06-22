@@ -3,11 +3,11 @@ import ImageHover from './style/ImageHover'
 
 const About = () => {
     return (
-        <section className="md:mx-14 mx-8 ">
+        <section className="md:mx-14 mx-8 my-20">
             <div className='max-w-5xl mx-auto text-left text-accent py-4 px-6 sm:px-4 lg:px-10'>
                 <div className='flex items-center space-x-8 mb-6'>
                     <h2 className="text-secondary text-2xl font-mono">01. <span className='text-accent font-semibold'>About Me</span></h2>
-                    <div className='h-px w-40 border border-sub'></div>
+                    <div className='h-px w-40 border'></div>
                 </div>
 
                 <div className="flex flex-col md:flex-row items-start gap-8">
@@ -37,13 +37,19 @@ const About = () => {
                         </div>
                     </div>
 
-                    {/* Image Placeholder */}
-                    <div className="md:w-1/2 w-full ">
-                        <div className="w-full rounded-lg flex items-center justify-center">
-                            {/* <span className="text-gray-400">[Photo of Brittany]</span> */}
-                            <ImageHover src={'/test-mountain.jpg'} className={'hover:-translate-1 hover:shadow-[4px_4px_1px_rgba(100,255,218,1)]'} />
+                    <div className="md:w-1/2 w-full flex justify-center">
+
+                        <div className="relative w-64 group ">
+
+                            <ImageHover
+                                src="/mountain-3.jpg"
+                                alt="Hover Image"
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1 z-10"
+                            />
+                            <div className="absolute inset-0 translate-4 border-2 rounded-md border-secondary transition-transform duration-300 ease-out group-hover:translate-x-5 group-hover:translate-y-5 z-0" />
                         </div>
-                        <div className='h-50 border border-secondary translate-2 hover:translate-6'></div>
+
+
                     </div>
                 </div>
             </div>
