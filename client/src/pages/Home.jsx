@@ -11,19 +11,18 @@ import ContactSection from '../components/ContactSection'
 import ContactFix from '../components/utils/ContactFix'
 import MailtoFix from '../components/utils/MailtoFix'
 
+const Sections = [
+  { id: 'about', element: <About /> },
+  { id: 'experience', element: <Experience /> },
+  { id: 'projects', element: <Projects /> },
+  { id: 'contact', element: <ContactSection /> },
+]
+
 
 const Home = () => {
-
-  const Sections = [
-    { id: 'about', element: <About /> },
-    { id: 'experience', element: <Experience /> },
-    { id: 'projects', element: <Projects /> },
-    { id: 'contact', element: <ContactSection /> },
-  ]
   return (
     <div className='flex flex-col mx-auto '>
-        <Hero />
-
+      <Hero />
       {
         Sections.map((section, index) => {
           return (

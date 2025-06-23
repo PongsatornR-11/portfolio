@@ -49,7 +49,7 @@ const Hero = () => {
                 {
                     heroComponents.map((heroComponent, index) => {
                         return (
-                            <FadeIn delay={index * 300 + 1900} duration={400} translateY='1rem'>
+                            <FadeIn delay={index * 300 + 2000} duration={400} translateY='1rem'>
                                 {heroComponent.element}
                             </FadeIn>
                         )
