@@ -10,6 +10,8 @@ import Projects from '../components/Projects'
 import ContactSection from '../components/ContactSection'
 import ContactFix from '../components/utils/ContactFix'
 import MailtoFix from '../components/utils/MailtoFix'
+import FadeIn from '../components/style/FadeIn'
+import FancyLink from '../components/style/FancyLink'
 
 const Sections = [
   { id: 'about', element: <About /> },
@@ -34,9 +36,10 @@ const Home = () => {
           )
         })
       }
-
+      {/* <FadeIn delay={3000}> */}
       <ContactFix />
       <MailtoFix email={'pongsatorn.rk@gmail.com'} />
+      {/* </FadeIn> */}
 
       {/* inspried : https://v3.brittanychiang.com/ */}
       {/* inspried : https://v4.brittanychiang.com/ */}
