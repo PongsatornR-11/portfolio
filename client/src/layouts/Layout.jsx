@@ -15,7 +15,7 @@ const Layout = () => {
     }, [])
     return (
         // <Loading>
-        <div >
+        <div>
             <Navbar ref={navbarRef} />
             <main className='flex bg-primary' style={{ paddingTop: `${navbarHeight}px` }}>
                 <Outlet />

@@ -39,7 +39,7 @@ const Navbar = forwardRef((props, ref) => {
           : '-translate-y-full pointer-events-none'
         } bg-primary/25 backdrop-blur-md shadow-xl`}
     >
-      <div className="mx-auto px-2 py-1 flex justify-between items-center">
+      <div className="px-2 py-1 flex justify-between items-center mx-4">
 
         <FadeIn
           delay={0}
@@ -67,7 +67,7 @@ const Navbar = forwardRef((props, ref) => {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >
-          {menuOpen ? <X /> : <AlignJustify />}
+          {menuOpen ? <X className='text-secondary'/> : <AlignJustify className='text-secondary' />}
         </button>
       </div>
 

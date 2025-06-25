@@ -2,6 +2,7 @@
 import React from "react";
 import FadeIn from "../style/FadeIn";
 import Button from "../utils/Button";
+import FancyLink from "../style/FancyLink";
 
 const NavLinks = ({ isMobile = false }) => {
     const sections = [
@@ -14,7 +15,7 @@ const NavLinks = ({ isMobile = false }) => {
 
     return (
         <div
-            className={`${isMobile ? 'flex flex-col space-y-2' : 'hidden md:flex items-center space-x-6'}
+            className={`${isMobile ? 'flex flex-col space-y-2' : 'hidden md:flex items-center space-x-8'}
         `}
         >
             {sections.map((section, index) => (
@@ -22,17 +23,15 @@ const NavLinks = ({ isMobile = false }) => {
                     {
                         section.name != 'Resume' ?
                             <a href={section.href}>
-                                <div key={index}
-                                    className='p-1 text-sm font-mono text-accent rounded-md 
-                            hover:text-secondary transition duration-300 ease-out hover:-translate-1 hover:shadow-[4px_4px_1px_rgba(100,255,218,1)]'
-                                >
-                                    <span className="text-accent">
+                                
+                                    <span className="text-accent text-sm font-mono">
                                         0{index + 1}.
                                     </span>
+                                    <FancyLink className={'text-sm font-mono text-accent hover:text-neutral transition-colors duration-300'}>
                                     {section.name}
-                                </div>
+                                    </FancyLink>
                             </a>
-                        : <Button className={'py-2 px-4 border rounded-md'}>Resume</Button>
+                        : <Button className={'text-sm py-3 px-4 border rounded-md'}>Resume</Button>
                     }
                 </FadeIn>
             )

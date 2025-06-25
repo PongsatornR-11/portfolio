@@ -48,8 +48,6 @@ const About = () => {
                             />
                             <div className="absolute inset-0 translate-4 border-2 rounded-md border-secondary transition-transform duration-300 ease-out group-hover:translate-x-5 group-hover:translate-y-5 z-0" />
                         </div>
-
-
                     </div>
                 </div>
             </div>

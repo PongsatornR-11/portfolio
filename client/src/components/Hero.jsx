@@ -1,6 +1,7 @@
 import React from 'react'
 import FadeIn from './style/FadeIn'
 import Button from './utils/Button'
+import FancyLink from './style/FancyLink'
 
 const Hero = () => {
     const heroComponents = [
@@ -28,9 +29,7 @@ const Hero = () => {
                 I'm a software engineer specializing in building (and occasionally
                 designing) exceptional digital experiences. Currently, I'm focused on
                 building accessible, human-centered products at{' '}
-                <a href="#about" className="text-secondary hover:underline">
-                    About ME
-                </a>.
+                <FancyLink href='#about'>About ME</FancyLink>
             </p>
         },
         {
@@ -38,13 +37,15 @@ const Hero = () => {
             element:
                 <a href='#projects'>
                     <Button className="border-2 border-secondary text-secondary px-8 py-4 rounded-md text-lg font-mono hover:bg-opacity-10 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50">
-                        Check out my Projects!
+                        <FancyLink>
+                            Check out my Projects!
+                        </FancyLink>
                     </Button>
                 </a>
         }
     ]
     return (
-        <section className='md:mx-14 pt-4 mx-8 h-screen'>
+        <section className='md:mx-14 pt-4 mx-8 h-[80vh] mt-30'>
             <div className="max-w-5xl mx-auto text-left py-4 px-6 sm:px-4 lg:px-10">
                 {
                     heroComponents.map((heroComponent, index) => {
