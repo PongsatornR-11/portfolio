@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = ({ children, className }) => {
+const Button = ({ children, className, onClick }) => {
   return (
     <button className={`${className} cursor-pointer border-secondary text-secondary
     transition duration-300 ease-in-out 
@@ -8,6 +8,7 @@ const Button = ({ children, className }) => {
     hover:shadow-[4px_4px_1px_rgba(100,255,218,1)]
     `}
       asChild
+      onClick={onClick}
     >
       {children}
     </button>

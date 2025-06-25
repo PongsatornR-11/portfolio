@@ -2,7 +2,9 @@ import React from 'react';
 import { Github, ExternalLink } from 'lucide-react'
 
 const ProjectCard = ({ dataProject }) => {
-    const { title, description, technologies, image } = dataProject;
+    const { title, description, technologies, image, links } = dataProject;
+    const gitLink = links.find(link => link.name === 'git');
+    const websiteLink = links.find(link => link.name === 'website');
     return (
         <div className="relative border w-full overflow-hidden rounded-lg my-10">
             {/* Background Image */}
@@ -32,8 +34,15 @@ const ProjectCard = ({ dataProject }) => {
                 </div>
 
                 <div className='my-4 flex justify-end space-x-4'>
-                    <Github className='hover:text-secondary hover:-translate-y-0.5 transition-all duration-200' />
-                    <ExternalLink className='hover:text-secondary hover:-translate-y-0.5 transition-all duration-200' />
+                    {gitLink &&
+                        (<a href={gitLink.href} target='_blank' rel='noopener noreferrer'>
+                            <Github className='hover:text-secondary hover:-translate-y-0.5 transition-all duration-200' />
+                        </a>)
+                    }
+                    {websiteLink && (<a href={websiteLink.href} target='_blank' rel='noopener noreferrer'>
+                        <ExternalLink className='hover:text-secondary hover:-translate-y-0.5 transition-all duration-200' />
+                    </a>)
+                    }
                 </div>
             </div>
         </div>
