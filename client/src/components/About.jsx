@@ -14,25 +14,27 @@ const About = () => {
 
 
                     {/* Text Content */}
-                    <div className="md:w-1/2 w-full space-y-4">
+                    <div class="md:w-1/2 w-full space-y-4">
                         <p>
-                            Hello! My name is Brittany and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+                            Highly motivated and self-taught Full Stack Software Engineer with a Bachelor's degree in Electrical Engineering (Power). Passionate about developing robust, user-friendly web applications.
                         </p>
                         <p>
-                            Fast-forward to today, and I've had the privilege of working at an <span className="text-teal-400">advertising agency</span>, <span className="text-teal-400">a start-up</span>, <span className="text-teal-400">a huge corporation</span>, and <span className="text-teal-400">a student-led design studio</span>. My main focus these days is building accessible, inclusive products and digital experiences at <span className="text-teal-400">Upstatement</span> for a variety of clients.
+                            Brings a strong foundation in electronics production and equipment engineering, with proven skills in problem-solving, system optimization, and analytical thinking.
                         </p>
                         <p>
-                            I also recently launched a course that covers everything you need to build a web app with the Spotify API using Node & React.
+                            Proficient in modern web technologies including JavaScript (React, Node.js, Express.js), Next.js, and database management (MySQL, SQL). Eager to contribute to innovative software solutions through full-stack development expertise.
                         </p>
                         <div>
-                            <h3 className="text-secondary font-semibold mt-4 mb-2">Technologies I've been working with recently:</h3>
-                            <ul className="list-disc list-inside space-y-1">
+                            <h3 class="text-secondary font-semibold mt-4 mb-2">Technologies I've been working with recently:</h3>
+                            <ul class="list-disc list-inside grid grid-cols-2 gap-1">
+                                <li>HTML & CSS</li>
                                 <li>JavaScript (ES6+)</li>
                                 <li>React</li>
+                                <li>Next.js</li>
                                 <li>Node.js</li>
-                                <li>TypeScript</li>
-                                <li>Eleventy</li>
-                                <li>WordPress</li>
+                                <li>Express.js</li>
+                                <li>MySQL</li>
+                                <li>Git & GitHub</li>
                             </ul>
                         </div>
                     </div>
