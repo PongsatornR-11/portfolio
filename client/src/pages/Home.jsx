@@ -36,11 +36,7 @@ const Home = () => {
           )
         })
       }
-      {/* <FadeIn delay={3000}> */}
-      <ContactFix />
-      <MailtoFix email={'pongsatorn.rk@gmail.com'} />
-      {/* </FadeIn> */}
-
+     
       {/* inspried : https://v3.brittanychiang.com/ */}
       {/* inspried : https://v4.brittanychiang.com/ */}
       {/* inspried : https://brittanychiang.com/ */}

@@ -14,22 +14,19 @@ const Hero = () => {
         {
             name: 'MainHeading',
             element: <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-accent leading-tight mb-4">
-                Bass, Pongsatorn
+                Pongsatorn Ruengkasikorn
             </h1>
         },
         {
             name: 'Quote',
-            element: <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-gray-500 leading-tight mb-8">
-                I build things for the web.
+            element: <h2 className="text-2xl sm:text-5xl md:text-6xl font-bold text-gray-500 leading-tight mb-8">
+                Full Stack Software Engineer.
             </h2>
         },
         {
             name: 'Description',
             element: <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-12">
-                I'm a software engineer specializing in building (and occasionally
-                designing) exceptional digital experiences. Currently, I'm focused on
-                building accessible, human-centered products at{' '}
-                <FancyLink href='#about'>About ME</FancyLink>
+                A self-taught Full Stack Software Engineer with a background in Electrical Engineering. I'm passionate about building robust and user-friendly web applications, with skills in modern web technologies like React, Node.js, and Next.js.
             </p>
         },
         {
