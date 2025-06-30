@@ -1,56 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 
 
 
 const workExperience = {
-    Upstatement: {
-        title: 'Lead Engineer @ Upstatement',
-        date: 'May 2018 – Present',
+    UTAC: {
+        title: 'Equipment Engineer @ UTAC Thai Limited',
+        date: '2023 - Present',
         bullets: [
-            'Deliver high-quality, robust production code.',
-            'Lead research and architecture of technical solutions.',
-            'Collaborate with designers and project managers.',
-            'Provide mentorship and leadership within the team.',
+            'Optimized laser marking machines to reduce downtime and improve UPH.',
+            'Managed machine tooling and maintained a PHP-based tooling system.',
+            'Performed preventive maintenance on critical equipment.',
+            'Troubleshot sensor, sequence, and design issues in automated machines.',
+            'Collaborated with teams to meet customer needs and enhance performance.',
         ],
     },
-    Apple: {
-        title: 'UI Engineer Co-op @ Apple',
-        date: 'July – December 2017',
+    'Cal-Comp': {
+        title: 'Production Engineer @ Cal-Comp Electronics',
+        date: '2021-2023',
         bullets: [
-            'Developed interactive web apps for Apple Music.',
-            'Built Apple Music Extension for Facebook Messenger.',
-            'Implemented Apple Music’s embeddable web player.',
-            'Contributed to MusicKit JS SDK.',
-        ],
-    },
-    ScoutStudio: {
-        title: 'Frontend Developer @ Scout Studio',
-        date: 'January – June 2017',
-        bullets: [
-            'Designed and developed responsive websites for student-led initiatives.',
-            'Worked closely with designers to translate mockups into functional interfaces.',
-            'Implemented animations and transitions for enhanced UX.',
-            'Participated in weekly design critiques and code reviews.',
-        ],
-    },
-    Starry: {
-        title: 'Software Engineering Intern @ Starry',
-        date: 'Summer 2016',
-        bullets: [
-            'Built internal tools to support customer service operations.',
-            'Integrated APIs to streamline data collection and reporting.',
-            'Wrote unit and integration tests to ensure code reliability.',
-            'Collaborated with product managers to define feature requirements.',
-        ],
-    },
-    MullenLowe: {
-        title: 'Web Developer Intern @ MullenLowe',
-        date: 'Fall 2015',
-        bullets: [
-            'Assisted in building marketing microsites for major campaigns.',
-            'Maintained and updated client websites using CMS platforms.',
-            'Optimized assets and scripts for performance.',
-            'Learned agile development practices in a fast-paced agency environment.',
+            'Investigated PCBA quality issues post-SMT, reflow, THT insertion, and wave soldering.',
+            'Applied analytical skills to identify root causes and implement corrective actions.',
+            'Gained insight into complex manufacturing workflows, applicable to software development.',
         ],
     },
 };
@@ -58,7 +28,19 @@ const workExperience = {
 
 const Experience = () => {
 
-    const [activeTab, setActiveTab] = useState('Apple');
+    const [activeTab, setActiveTab] = useState('UTAC');
+    const tabRefs = useRef({});
+    const [sliderStyle, setSliderStyle] = useState({ top: 0, height: 0 });
+
+    useEffect(() => {
+        const activeTabElement = tabRefs.current[activeTab];
+        if (activeTabElement) {
+            setSliderStyle({
+                top: activeTabElement.offsetTop,
+                height: activeTabElement.offsetHeight,
+            });
+        }
+    }, [activeTab]);
 
     return (
         <section className="md:mx-14 mx-8 my-20">
@@ -71,15 +53,23 @@ const Experience = () => {
 
                 <div className="flex max-w-4xl mx-auto mt-10">
                     {/* Tabs */}
-                    <div className="w-1/5">
+                    <div className="relative w-1/5 border-l-2 border-neutral">
+                        <div
+                            className="absolute left-[-2px] w-[2px] bg-secondary transition-all duration-300 ease-in-out"
+                            style={{
+                                top: sliderStyle.top,
+                                height: sliderStyle.height,
+                            }}
+                        ></div>
                         {Object.keys(workExperience).map((company) => (
                             <button
                                 key={company}
+                                ref={(el) => (tabRefs.current[company] = el)}
                                 onClick={() => setActiveTab(company)}
                                 className={`block w-full text-left px-4 py-2 font-medium 
-                            ${activeTab === company
-                                        ? 'border-l-2 text-secondary'
-                                        : 'border-l-2 border-neutral hover:bg-secondary/25 backdrop-blur-md text-accent'
+                                ${activeTab === company
+                                        ? 'text-secondary'
+                                        : 'text-accent hover:bg-secondary/25 backdrop-blur-md'
                                     }`}
                             >
                                 {company}
