@@ -21,7 +21,7 @@ const ProjectCardSmall = ({ dataProject }) => {
                         <Github className='inline' />
                     </a>
                     <a href={liveDemo} target='_blank' rel='noopener noreferrer' className='hover:text-secondary text-accent transition-colors'>
-                    <ExternalLink className='inline' />
+                        <ExternalLink className='inline' />
                     </a>
                 </div>
             </div>

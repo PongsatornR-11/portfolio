@@ -7,11 +7,12 @@ const ProjectGrid = () => {
     const [showMore, setShowMore] = useState(false)
     const project = [
         {
-            title: 'Project 1',
-            description: 'A brief description of Project 1.',
+            title: 'System Monitor',
+            description: 'A system monitor application that displays real-time CPU, memory, and network usage.',
             tags: ['React', 'Tailwind CSS', 'JavaScript'],
             github: '#',
-            liveDemo: '#'
+            liveDemo: '#',
+            image: '/ProjectPics/Screenshot Systemmonitor Project.jpg'
         },
         {
             title: 'Project 2',

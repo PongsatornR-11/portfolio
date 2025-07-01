@@ -3,7 +3,7 @@ import ImageHover from './style/ImageHover'
 
 const About = () => {
     return (
-        <section className="md:mx-14 mx-8 my-20">
+        <section className="md:mx-14 mx-8 my-40">
             <div className='max-w-5xl mx-auto text-left text-accent py-4 px-6 sm:px-4 lg:px-10'>
                 <div className='flex items-center space-x-8 mb-6'>
                     <h2 className="text-secondary text-2xl font-mono">01. <span className='text-accent font-semibold'>About Me</span></h2>
