@@ -51,9 +51,9 @@ const Experience = () => {
                     <div className='h-px w-40 border'></div>
                 </div>
 
-                <div className="flex max-w-4xl mx-auto mt-10">
+                <div className="grid grid-cols-5 max-w-4xl mx-auto mt-10">
                     {/* Tabs */}
-                    <div className="relative w-1/5 border-l-2 border-neutral">
+                    <div className="relative col-span-1 border-l-2 border-neutral">
                         <div
                             className="absolute left-[-2px] w-[2px] bg-secondary transition-all duration-300 ease-in-out"
                             style={{
@@ -78,7 +78,7 @@ const Experience = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="w-4/5 p-6">
+                    <div className="col-span-4 p-6">
                         <h3 className="text-xl font-semibold text-accent">{workExperience[activeTab].title}</h3>
                         <p className="text-sm text-accent mb-4">{workExperience[activeTab].date}</p>
                         <ul className="list-disc list-inside space-y-2 text-accent">
