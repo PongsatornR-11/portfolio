@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar'
 import Loading from '../components/load/Loading'
 import ContactFix from '../components/utils/ContactFix'
 import MailtoFix from '../components/utils/MailtoFix'
+import BackToTop from '../components/utils/BackToTop'
+import ContactSmall from '../components/utils/ContactSmall'
 
 const Layout = () => {
     const navbarRef = useRef(null)
@@ -24,6 +26,8 @@ const Layout = () => {
             </main>
             <ContactFix />
             <MailtoFix email={'pongsatorn.rk@gmail.com'} />
+            <ContactSmall />
+            <BackToTop />
         </div>
         // </Loading>
     )
