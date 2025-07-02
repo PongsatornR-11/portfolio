@@ -47,7 +47,7 @@ const Experience = () => {
             <div className='max-w-5xl mx-auto text-left text-accent py-4 px-6 sm:px-4 lg:px-10'>
 
                 <div className='flex items-center space-x-8 mb-6'>
-                    <h2 className="text-secondary text-2xl font-mono">02. <span className='text-accent font-semibold'>Work Experiences</span></h2>
+                    <h2 className="text-secondary text-2xl font-mono">03. <span className='text-accent font-semibold'>Work Experiences</span></h2>
                     <div className='h-px w-40 border'></div>
                 </div>
 

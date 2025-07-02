@@ -7,10 +7,11 @@ import FancyLink from "../style/FancyLink";
 const NavLinks = ({ isMobile = false }) => {
     const sections = [
         { name: 'About', href: '#about' },
+        { name: 'Skills', href: '#skills' },
         { name: 'Experience', href: '#experience' },
         { name: 'Projects', href: '#projects' },
         { name: 'Contact', href: '#contact' },
-        { name: 'Resume' }
+        { name: 'Resume' , href: '/Pongsatorn\'s Resume.pdf' }
     ]
 
     return (

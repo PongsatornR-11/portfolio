@@ -8,13 +8,12 @@ import About from '../components/About'
 import Experience from '../components/Experience'
 import Projects from '../components/Projects'
 import ContactSection from '../components/ContactSection'
-import ContactFix from '../components/utils/ContactFix'
-import MailtoFix from '../components/utils/MailtoFix'
-import FadeIn from '../components/style/FadeIn'
-import FancyLink from '../components/style/FancyLink'
+
+import Skills from '../components/Skills'
 
 const Sections = [
   { id: 'about', element: <About /> },
+  { id: 'skills', element: <Skills /> },
   { id: 'experience', element: <Experience /> },
   { id: 'projects', element: <Projects /> },
   { id: 'contact', element: <ContactSection /> },

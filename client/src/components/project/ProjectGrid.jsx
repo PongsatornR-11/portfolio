@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import ProjectCardSmall from './ProjectCardSmall'
 import Button from '../utils/Button'
+import FadeInScroll from '../style/FadeInScroll'
 
 const ProjectGrid = () => {
     const [showMore, setShowMore] = useState(false)
@@ -45,9 +46,13 @@ const ProjectGrid = () => {
     ]
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10'>
-            {project.slice(0, showMore ? project.length : 3).map((dataProject, index) => (
-                <ProjectCardSmall key={index} dataProject={dataProject} />
-            ))}
+            {
+                project.slice(0, showMore ? project.length : 2).map((dataProject, index) => (
+                    <FadeInScroll>
+                        <ProjectCardSmall key={index} dataProject={dataProject} />
+                    </FadeInScroll>
+                ))
+            }
             {!showMore ? (
                 <div className='col-span-full text-center mt-4'>
                     <Button

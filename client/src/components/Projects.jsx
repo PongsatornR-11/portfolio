@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ProjectCardMdLeft, ProjectCardMdRight } from './project/ProjectCardMd'
 import FadeInScroll from './style/FadeInScroll'
 import ProjectCard from './project/ProjectCard'
 import ProjectGrid from './project/ProjectGrid'
 import FancyLink from './style/FancyLink'
-import ProjectCardSmall from './project/ProjectCardSmall'
 
 
 const ProjectList = [
@@ -38,9 +37,6 @@ const ProjectList = [
     }
 ]
 
-
-
-
 const Projects = () => {
 
     return (
@@ -48,7 +44,7 @@ const Projects = () => {
             <div className='max-w-5xl mx-auto text-left text-accent py-4 px-6 sm:px-4 lg:px-10'>
                 <div className='flex items-center space-x-8 mb-6'>
                     <h2 className="text-secondary text-2xl font-mono">
-                        03. <span className='text-accent font-semibold'>
+                        04. <span className='text-accent font-semibold'>
                             My Projects
                         </span>
                     </h2>
@@ -85,13 +81,7 @@ const Projects = () => {
                     </div>
                 </div>
 
-                
-                {/* <ProjectGrid /> */}
-
-                {/* <ProjectCardSmall /> */}
-
-
-            
+                <ProjectGrid />
             </div>
         </section>
     )

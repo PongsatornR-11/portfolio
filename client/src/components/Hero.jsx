@@ -14,7 +14,7 @@ const Hero = () => {
         {
             name: 'MainHeading',
             element: <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-accent leading-tight mb-4">
-                Pongsatorn Ruengkasikorn
+                Pongsatorn ( Bass )
             </h1>
         },
         {
