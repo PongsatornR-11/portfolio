@@ -11,7 +11,7 @@ const NavLinks = ({ isMobile = false }) => {
         { name: 'Experience', href: '#experience' },
         { name: 'Projects', href: '#projects' },
         { name: 'Contact', href: '#contact' },
-        { name: 'Resume' , href: '/Pongsatorn\'s Resume.pdf' }
+        { name: 'Resume', href: '/Pongsatorn\'s Resume.pdf' }
     ]
 
     return (
@@ -22,17 +22,18 @@ const NavLinks = ({ isMobile = false }) => {
             {sections.map((section, index) => (
                 <FadeIn key={index} delay={index * 300} duration={300}>
                     {
-                        section.name != 'Resume' ?
-                            <a href={section.href}>
-                                
-                                    <span className="text-accent text-sm font-mono">
-                                        0{index + 1}.
-                                    </span>
-                                    <FancyLink className={'text-sm font-mono text-accent hover:text-neutral transition-colors duration-300'}>
+                        section.name != 'Resume'
+                            ? <a href={section.href}>
+                                <span className="text-accent text-sm font-mono">
+                                    0{index + 1}.
+                                </span>
+                                <FancyLink className={'text-sm font-mono text-accent hover:text-neutral transition-colors duration-300'}>
                                     {section.name}
-                                    </FancyLink>
+                                </FancyLink>
                             </a>
-                        : <Button className={'text-sm py-3 px-4 border rounded-md'}>Resume</Button>
+                            : <a href="/Pongsatorn's Resume.pdf" target="_blank" rel="noopener noreferrer">
+                                <Button className={'text-sm py-3 px-4 border rounded-md'}>Resume</Button>
+                            </a>
                     }
                 </FadeIn>
             )

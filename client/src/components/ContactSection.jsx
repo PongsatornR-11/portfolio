@@ -8,13 +8,13 @@ const ContactSection = () => {
             <div className='text-center'>
                 <p className='font-mono text-secondary'>05. What's Next</p>
                 <div className='flex items-center justify-center space-x-2 mt-2 mb-4'>
-                    <p className='text-accent text-5xl font-bold'>Get In Touch</p>
-                    <a href="mailto:pongsatorn.rk@gmail.com">
+                    <a href="mailto:pongsatorn.rk@gmail.com" className='flex'>
+                        <p className='text-accent text-5xl font-bold'>Get In Touch</p>
                         <Send className='text-accent transition-transform hover:-translate-y-1 hover:translate-x-1' />
                     </a>
                 </div>
                 <p className='text-accent text-2xl mt-4'>
-                    I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+                    I'm excited to leverage my skills in modern web technologies to help build your next project. Feel free to reach out!
                 </p>
 
                 <a href="mailto:pongsatorn.rk@gmail.com">

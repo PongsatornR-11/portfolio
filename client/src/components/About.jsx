@@ -1,6 +1,17 @@
 import React from 'react'
 import ImageHover from './style/ImageHover'
+import TechStackIcon from './utils/TechStackIcon'
 
+const aboutTechStacks = [
+    { name: 'HTML & CSS', iconName: 'html5' },
+    { name: 'JavaScript (ES6+)', iconName: 'js' },
+    { name: 'React', iconName: 'react' },
+    { name: 'Next.js', iconName: 'nextjs2' },
+    { name: 'Node.js', iconName: 'nodejs' },
+    { name: 'Express.js', iconName: 'expressjs' },
+    { name: 'MySQL', iconName: 'mysql' },
+    { name: 'Git & GitHub', iconName: 'git' },
+]
 const About = () => {
     return (
         <section className="md:mx-14 mx-8 my-40">
@@ -14,7 +25,7 @@ const About = () => {
 
 
                     {/* Text Content */}
-                    <div class="md:w-1/2 w-full space-y-4">
+                    <div className="md:w-1/2 w-full space-y-4">
                         <p>
                             Highly motivated and self-taught Full Stack Software Engineer with a Bachelor's degree in Electrical Engineering (Power). Passionate about developing robust, user-friendly web applications.
                         </p>
@@ -25,16 +36,20 @@ const About = () => {
                             Proficient in modern web technologies including JavaScript (React, Node.js, Express.js), Next.js, and database management (MySQL, SQL). Eager to contribute to innovative software solutions through full-stack development expertise.
                         </p>
                         <div>
-                            <h3 class="text-secondary font-semibold mt-4 mb-2">Technologies I've been working with recently:</h3>
-                            <ul class="list-disc list-inside grid grid-cols-2 gap-1">
-                                <li>HTML & CSS</li>
-                                <li>JavaScript (ES6+)</li>
-                                <li>React</li>
-                                <li>Next.js</li>
-                                <li>Node.js</li>
-                                <li>Express.js</li>
-                                <li>MySQL</li>
-                                <li>Git & GitHub</li>
+                            <h3 className="text-secondary font-semibold mt-4 mb-2">Technologies I've been working with recently:</h3>
+                            <ul className="list-disc list-inside grid grid-cols-2 gap-1">
+                                {
+                                    aboutTechStacks.map((techStack, index) => {
+                                        return (
+                                            <li key={index} className='flex'>
+                                                <div className='flex gap-2'>
+                                                    <TechStackIcon name={techStack.iconName} />
+                                                    <span>{techStack.name}</span>
+                                                </div>
+                                            </li>
+                                        )
+                                    })
+                                }
                             </ul>
                         </div>
                     </div>

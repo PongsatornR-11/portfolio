@@ -5,37 +5,8 @@ import ProjectCard from './project/ProjectCard'
 import ProjectGrid from './project/ProjectGrid'
 import FancyLink from './style/FancyLink'
 
+import { ProjectList } from '../constants/projects'
 
-const ProjectList = [
-    {
-        type: 'right',
-        data: {
-            title: 'Ecommerce (Full Stack)',
-            description: 'A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
-            technologies: ['Node.js (Express)', 'React', 'MySQL', 'Prisma (ORM)'],
-            image: '/mountain-3.jpg',
-            links: [
-                { name: 'git', href: 'https://github.com/PongsatornR-11/Ecommerce' },
-                { name: 'website', href: 'https://ecommerce-pongsatorn.vercel.app/' }
-            ]
-        }
-    },
-    {
-        type: 'left',
-        data: {
-            title: 'Portfolio Website',
-            description: 'A personal portfolio website showcasing my projects and skills, built with React and Tailwind CSS.',
-            technologies: ['React', 'Tailwind CSS', 'JavaScript'],
-            image: '/portfolio.webp',
-            links:
-                [
-                    { name: 'git', href: 'https://github.com/PongsatornR-11/portfolio' },
-                    { name: 'website', href: 'https://github.com/PongsatornR-11/portadsfsdfdsafolio' },
-
-                ]
-        }
-    }
-]
 
 const Projects = () => {
 
@@ -53,11 +24,11 @@ const Projects = () => {
                 <div className='hidden md:block'>
                     {ProjectList.map((project, index) => {
                         return (
-                            <FadeInScroll>
+                            <FadeInScroll key={index}>
                                 {project.type === 'right' ? (
-                                    <ProjectCardMdRight key={index} dataProject={project.data} />
+                                    <ProjectCardMdRight dataProject={project.data} />
                                 ) : (
-                                    <ProjectCardMdLeft key={index} dataProject={project.data} />
+                                    <ProjectCardMdLeft dataProject={project.data} />
                                 )}
                             </FadeInScroll>
                         )
@@ -66,8 +37,8 @@ const Projects = () => {
                 <div className='md:hidden'>
                     {ProjectList.map((project, index) => {
                         return (
-                            <FadeInScroll>
-                                <ProjectCard key={index} dataProject={project.data} />
+                            <FadeInScroll key={index}>
+                                <ProjectCard dataProject={project.data} />
                             </FadeInScroll>
                         )
                     })}

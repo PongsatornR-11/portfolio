@@ -7,7 +7,6 @@ const Button = ({ children, className, onClick }) => {
     hover:-translate-1 
     hover:shadow-[4px_4px_1px_rgba(100,255,218,1)]
     `}
-      asChild
       onClick={onClick}
     >
       {children}

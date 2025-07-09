@@ -8,7 +8,6 @@ import About from '../components/About'
 import Experience from '../components/Experience'
 import Projects from '../components/Projects'
 import ContactSection from '../components/ContactSection'
-
 import Skills from '../components/Skills'
 
 const Sections = [
