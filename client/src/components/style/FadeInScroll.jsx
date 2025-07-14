@@ -14,7 +14,7 @@ const FadeInScroll = ({ children, delay = 300, duration = 1000 }) => {
 
                 }
             },
-            { threshold: 0.5 }
+            { threshold: 0.4 }
         )
 
         if (ref.current) {

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import FancyLink from './style/FancyLink';
 import { skills } from '../constants/skills';
+import TechStackIcon from './utils/TechStackIcon';
 
 const Skills = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null)
@@ -21,7 +22,7 @@ const Skills = () => {
           <div className="flex flex-wrap justify-center relative">
             {skills.map((skill, index) => (
               <a
-                href={skill.website}
+                href={skill.href}
                 key={index}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -35,7 +36,8 @@ const Skills = () => {
                 </div>
                 {hoveredSkill === index && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 mb-2 w-64 p-2 bg-neutral text-accent text-sm rounded-md shadow-lg z-20">
-                    {skill.description}
+                    <TechStackIcon variant='dark' name={skill.icon} size={40}/>
+                    <span className='mt-2'>{skill.description}</span>
                   </div>
                 )}
               </a>

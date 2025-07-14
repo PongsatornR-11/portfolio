@@ -6,6 +6,11 @@ export const ProjectList = [
             description: 'A minimal, dark blue theme foadsfafdsafdsr VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
             technologies: ['Node.js (Express)', 'React', 'MySQL', 'Prisma (ORM)'],
             image: '/mountain-3.jpg',
+            images: [
+                { src: '/projectPics/ecommerce/Screenshot Ecommerce Project.jpg' },
+                { src: '/projectPics/ecommerce/Screenshot Ecommerce Project_2.jpg' },
+                { src: '/projectPics/ecommerce/Screenshot Ecommerce Project_3.jpg' }
+            ],
             links: [
                 { name: 'git', href: 'https://github.com/PongsatornR-11/Ecommerce' },
                 { name: 'website', href: 'https://ecommerce-pongsatorn.vercel.app/' }
@@ -19,6 +24,14 @@ export const ProjectList = [
             description: 'A personal portfolio website showcasing my projects and skills, built with React and Tailwind CSS.',
             technologies: ['React', 'Tailwind CSS', 'JavaScript'],
             image: '/portfolio.webp',
+            images: [
+                { src: '/projectPics/system_monitor/Screenshot Systemmonitor Project.jpg' },
+                { src: '/projectPics/system_monitor/Screenshot Systemmonitor Project_2.jpg' },
+                { src: '/projectPics/system_monitor/Screenshot Systemmonitor Project_3.jpg' },
+                { src: '/projectPics/system_monitor/Screenshot Systemmonitor Project_4.jpg' },
+                { src: '/projectPics/system_monitor/Screenshot Systemmonitor Project_5.jpg' },
+                { src: '/projectPics/system_monitor/Screenshot Systemmonitor Project_6.jpg' },
+            ],
             links:
                 [
                     { name: 'git', href: 'https://github.com/PongsatornR-11/portfolio' },

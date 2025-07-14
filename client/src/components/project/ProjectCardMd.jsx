@@ -1,9 +1,10 @@
 import React from 'react'
 import ImageHover from '../style/ImageHover'
+import ImageSwiper from '../style/ImageSwiper.jsx'
 import { Github, ExternalLink } from 'lucide-react'
 
 export function ProjectCardMdRight({ dataProject }) {
-    const { title, description, technologies, image, links } = dataProject;
+    const { title, description, technologies, image, images, links } = dataProject;
 
     const gitLink = links.find(link => link.name === 'git');
     const websiteLink = links.find(link => link.name === 'website');

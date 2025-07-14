@@ -34,7 +34,7 @@ const Home = () => {
           )
         })
       }
-     
+
       {/* inspried : https://v3.brittanychiang.com/ */}
       {/* inspried : https://v4.brittanychiang.com/ */}
       {/* inspried : https://brittanychiang.com/ */}
