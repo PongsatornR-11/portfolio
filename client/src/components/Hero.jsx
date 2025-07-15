@@ -19,7 +19,7 @@ const Hero = () => {
         },
         {
             name: 'Quote',
-            element: <h2 className="text-2xl sm:text-5xl md:text-6xl font-bold text-gray-500 leading-tight mb-8">
+            element: <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-500 leading-tight mb-8">
                 Full Stack Software Engineer.
             </h2>
         },

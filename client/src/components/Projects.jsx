@@ -9,7 +9,6 @@ import { ProjectList } from '../constants/projects'
 
 
 const Projects = () => {
-
     return (
         <section className="md:mx-14 mx-8 my-20">
             <div className='max-w-5xl mx-auto text-left text-accent py-4 px-6 sm:px-4 lg:px-10'>
@@ -44,15 +43,15 @@ const Projects = () => {
                     })}
                 </div>
 
-                <div className='mt-24 mb-12'>
+                {/* <div className='mt-24 mb-12'>
                     <div className='h-px w-40 border mx-auto mb-4'></div>
                     <h3 className='text-center text-2xl font-bold'>Other Noteworthy Projects</h3>
                     <div className='flex justify-center my-2'>
                         <FancyLink className='mx-auto text-center font-mono text-sm'>Archive Projects</FancyLink>
                     </div>
-                </div>
+                </div> */}
 
-                <ProjectGrid />
+                {/* <ProjectGrid /> */}
             </div>
         </section>
     )

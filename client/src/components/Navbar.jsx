@@ -1,6 +1,5 @@
 import { useState, useEffect, forwardRef } from 'react';
-import { Atom, X, AlignJustify } from 'lucide-react'
-import Button from './utils/Button';
+import { X, AlignJustify } from 'lucide-react'
 import NavLinks from './nav/NavLinks';
 import MainIcon from './icons/MainIcon';
 
@@ -41,16 +40,15 @@ const Navbar = forwardRef((props, ref) => {
     >
       <div className="px-2 py-1 flex justify-between items-center mx-4">
 
-        <FadeIn
-          delay={0}
-          duration={500}
-          onFadeInComplete={() => setShowNavLinks(true)}
-        >
-          {/* <MainIcon /> */}
-          <Button className={'rounded-md p-1'}>
-            <Atom size={60} />
-          </Button>
-        </FadeIn>
+        <a href="#">
+          <FadeIn
+            delay={0}
+            duration={500}
+            onFadeInComplete={() => setShowNavLinks(true)}
+          >
+            <MainIcon />
+          </FadeIn>
+        </a>
 
         {/*  Desktop Menu */}
         {
@@ -67,7 +65,7 @@ const Navbar = forwardRef((props, ref) => {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >
-          {menuOpen ? <X className='text-secondary'/> : <AlignJustify className='text-secondary' />}
+          {menuOpen ? <X className='text-secondary' /> : <AlignJustify className='text-secondary' />}
         </button>
       </div>
 

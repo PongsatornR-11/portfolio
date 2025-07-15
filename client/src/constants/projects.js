@@ -2,10 +2,10 @@ export const ProjectList = [
     {
         type: 'right',
         data: {
-            title: 'Ecommerce (Full Stack)',
-            description: 'A minimal, dark blue theme foadsfafdsafdsr VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.',
-            technologies: ['Node.js (Express)', 'React', 'MySQL', 'Prisma (ORM)'],
-            image: '/mountain-3.jpg',
+            title: 'Ecommerce Shopping Website',
+            description: 'A minimal, dark blue theme foadsfafdsafdsr VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm ',
+            technologies: ['Node.js (Express)', 'React', 'MySQL', 'Prisma', 'Cloudinary'],
+            image: '/projectPics/ecommerce/Screenshot Ecommerce Project.jpg',
             images: [
                 { src: '/projectPics/ecommerce/Screenshot Ecommerce Project.jpg' },
                 { src: '/projectPics/ecommerce/Screenshot Ecommerce Project_2.jpg' },
@@ -17,13 +17,34 @@ export const ProjectList = [
             ]
         }
     },
+ 
     {
         type: 'left',
         data: {
-            title: 'Portfolio Website',
+            title: 'Camping Website',
             description: 'A personal portfolio website showcasing my projects and skills, built with React and Tailwind CSS.',
-            technologies: ['React', 'Tailwind CSS', 'JavaScript'],
-            image: '/portfolio.webp',
+            technologies: ['NextJS','React', 'TypeScript', 'Prisma', 'Supabase', 'Clerk', 'Shadcn'],
+            image: '/projectPics/camping/Screenshot camping Project.jpg',
+            images: [
+                { src: '/projectPics/camping/Screenshot camping Project.jpg' },
+                { src: '/projectPics/camping/Screenshot camping Project_2.jpg' },
+                { src: '/projectPics/camping/Screenshot camping Project_3.jpg' },
+                { src: '/projectPics/camping/Screenshot camping Project_4.jpg' },
+            ],
+            links:
+                [
+                    { name: 'git', href: 'https://github.com/PongsatornR-11/camping' },
+                    { name: 'website', href: 'https://github.com/PongsatornR-11/portadsfsdfdsafolio' },
+                ]
+        }
+    },
+    {
+        type: 'right',
+        data: {
+            title: 'System Monitor for my raspberry Pi',
+            description: 'A personal portfolio website showcasing my projects and skills, built with React and Tailwind CSS.',
+            technologies: ['React', 'ExpressJS', 'SystemInformation', 'TailwindCSS', 'Cloudflared', 'PM2'],
+            image: '/projectPics/system_monitor/Screenshot Systemmonitor Project.jpg',
             images: [
                 { src: '/projectPics/system_monitor/Screenshot Systemmonitor Project.jpg' },
                 { src: '/projectPics/system_monitor/Screenshot Systemmonitor Project_2.jpg' },
@@ -34,14 +55,13 @@ export const ProjectList = [
             ],
             links:
                 [
-                    { name: 'git', href: 'https://github.com/PongsatornR-11/portfolio' },
-                    { name: 'website', href: 'https://github.com/PongsatornR-11/portadsfsdfdsafolio' },
-
+                    { name: 'git', href: 'https://github.com/PongsatornR-11/sysmonitor' },
+                    { name: 'website', href: 'https://sysmonitor.mypiserviceshub.com/' },
                 ]
         }
-    }
-]
+    },
 
+]
 
 export const projectGrid = [
     {

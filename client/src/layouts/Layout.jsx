@@ -18,8 +18,7 @@ const Layout = () => {
         }
     }, [])
     return (
-        // <Loading>
-        <div>
+        <Loading>
             <Navbar ref={navbarRef} />
             <main className='flex bg-primary' style={{ paddingTop: `${navbarHeight}px` }}>
                 <Outlet />
@@ -28,8 +27,7 @@ const Layout = () => {
             <MailtoFix email={'pongsatorn.rk@gmail.com'} />
             <ContactSmall />
             <BackToTop />
-        </div>
-        // </Loading>
+        </Loading>
     )
 }
 

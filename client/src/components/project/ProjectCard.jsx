@@ -11,7 +11,7 @@ const ProjectCard = ({ dataProject }) => {
             <img
                 src={image}
                 alt="Project Background"
-                className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
+                className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
             />
 
             {/* Overlay Content */}

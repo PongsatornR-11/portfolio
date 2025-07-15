@@ -32,7 +32,7 @@ const BackToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="border cursor-pointer border-secondary text-secondary transition-all hover:bg-secondary hover:text-primary hover:-translate-y-1 font-bold py-1 px-4 rounded-lg"
+          className="border cursor-pointer bg-primary border-secondary text-secondary transition-all hover:bg-secondary hover:text-primary hover:-translate-y-1 font-bold py-1 px-4 rounded-lg"
         >
           <ArrowBigUp />
         </button>

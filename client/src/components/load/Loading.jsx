@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { LoaderSpin, LoaderTyping, LoaderBLetter } from '../utils/Loader'
+import AnimatedMainIcon from '../utils/AnimatedMainIcon';
 
 const Loading = ({ children }) => {
     const [loading, setLoading] = useState(true);
@@ -12,7 +12,9 @@ const Loading = ({ children }) => {
         loading
             ?
             <div className='h-screen bg-primary flex items-center justify-center'>
-                <LoaderBLetter />
+                {/* <LoaderBLetter /> */}
+                {/* <LoadingIcon /> */}
+                <AnimatedMainIcon />
             </div>
             :
             < div >

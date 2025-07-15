@@ -1,10 +1,9 @@
 import React from 'react'
 import ImageHover from '../style/ImageHover'
-import ImageSwiper from '../style/ImageSwiper.jsx'
 import { Github, ExternalLink } from 'lucide-react'
 
 export function ProjectCardMdRight({ dataProject }) {
-    const { title, description, technologies, image, images, links } = dataProject;
+    const { title, description, technologies, image, links } = dataProject;
 
     const gitLink = links.find(link => link.name === 'git');
     const websiteLink = links.find(link => link.name === 'website');
@@ -18,7 +17,7 @@ export function ProjectCardMdRight({ dataProject }) {
                 <div className='flex justify-end'>
                     <ul className='flex justify-start space-x-4 text-sm items-center'>
                         {technologies.map((tech, i) => (
-                            <li key={i} className='border p-1 rounded-md'>{tech}</li>
+                            <li key={i} className='px-2 py-1 bg-secondary text-neutral rounded-md text-xs'>{tech}</li>
                         ))}
                     </ul>
                 </div>
@@ -35,6 +34,7 @@ export function ProjectCardMdRight({ dataProject }) {
                 </div>
             </div>
         </div>
+
     );
 }
 
@@ -45,12 +45,8 @@ export function ProjectCardMdLeft({ dataProject }) {
     return (
         <div className='relative flex my-10'>
             <div className='w-full flex'>
-                <div className='w-1/3'>
-                </div>
-                <ImageHover
-                    src={image}
-                    className={'absolute right-0 w-2/3 z-0'}
-                />
+                <div className='w-1/3'></div>
+                <ImageHover src={image} className='w-2/3 z-0' />
             </div>
             <div className='absolute left-0 z-10 max-w-2/3'>
                 <p className='font-mono text-sm text-secondary'>Featured Project</p>
@@ -60,9 +56,7 @@ export function ProjectCardMdLeft({ dataProject }) {
                 </div>
                 <div className='w-2/3'>
                     <ul className='flex justify-start space-x-4 text-sm items-center'>
-                        {
-                            technologies.map((tech, i) => <li key={i} className='border p-1 rounded-md'>{tech}</li>)
-                        }
+                        {technologies.map((tech, i) => <li key={i} className='px-2 py-1 bg-secondary text-neutral rounded-md text-xs'>{tech}</li>)}
                     </ul>
                 </div>
                 <div className='my-4 flex justify-start space-x-4'>
