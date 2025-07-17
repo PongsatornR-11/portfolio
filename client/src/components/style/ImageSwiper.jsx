@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-export default function ImageSwiper({ images, className, rounded = 'lg' }) {
+export default function ImageSwiper({ images, className }) {
     return (
         <Swiper
             autoplay={{
@@ -19,13 +19,13 @@ export default function ImageSwiper({ images, className, rounded = 'lg' }) {
             }}
             pagination={{ clickable: true, }}
             modules={[Pagination, Autoplay, Navigation]}
-            className={`${className} ${rounded} mySwiper object-cover`}
+            className={`${className} mySwiper object-cover`}
         >
             {
                 images?.map((image, index) => {
                     return (
                         <SwiperSlide key={index}>
-                            <img src={image.src} alt={`slide ${index + 1}`} className={`${rounded} w-full h-full object-cover`} />
+                            <img src={image.src} alt={`slide ${index + 1}`} className={`w-full h-full object-cover`} />
                         </SwiperSlide>
                     )
                 })

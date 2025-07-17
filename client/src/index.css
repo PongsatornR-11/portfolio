@@ -11,3 +11,13 @@ html {
     --color-accent: #ccd6f6;
     --color-neutral : #233554;
 }
+
+.typing-cursor {
+    border-right: 2px solid;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--color-secondary); }
+}

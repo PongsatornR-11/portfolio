@@ -1,17 +1,9 @@
 import React from 'react'
 import ImageHover from './style/ImageHover'
 import TechStackIcon from './utils/TechStackIcon'
+import { skills } from '../constants/skills'
 
-const aboutTechStacks = [
-    { name: 'HTML & CSS', iconName: 'html5' },
-    { name: 'JavaScript (ES6+)', iconName: 'js' },
-    { name: 'React', iconName: 'react' },
-    { name: 'Next.js', iconName: 'nextjs2' },
-    { name: 'Node.js', iconName: 'nodejs' },
-    { name: 'Express.js', iconName: 'expressjs' },
-    { name: 'MySQL', iconName: 'mysql' },
-    { name: 'Git & GitHub', iconName: 'git' },
-]
+
 const About = () => {
     return (
         <section className="md:mx-14 mx-8 my-40">
@@ -39,7 +31,7 @@ const About = () => {
                             <h3 className="text-secondary font-semibold mt-4 mb-2">Technologies I've been working with recently:</h3>
                             <ul className="list-disc list-inside grid grid-cols-2 gap-1">
                                 {
-                                    aboutTechStacks.map((techStack, index) => {
+                                    skills.map((techStack, index) => {
                                         return (
                                             <li key={index} className='flex'>
                                                 <div className='flex gap-2'>

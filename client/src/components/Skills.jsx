@@ -36,7 +36,7 @@ const Skills = () => {
                 </div>
                 {hoveredSkill === index && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 mb-2 w-64 p-2 bg-neutral text-accent text-sm rounded-md shadow-lg z-20">
-                    <TechStackIcon variant='dark' name={skill.icon} size={40}/>
+                    <TechStackIcon name={skill.icon} size={40}/>
                     <span className='mt-2'>{skill.description}</span>
                   </div>
                 )}

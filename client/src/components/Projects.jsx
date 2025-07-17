@@ -6,11 +6,13 @@ import ProjectGrid from './project/ProjectGrid'
 import FancyLink from './style/FancyLink'
 
 import { ProjectList } from '../constants/projects'
+import ProjectCardMdV2 from './project/ProjectCardMdV2'
+import ProjectCardV2 from './project/ProjectCardV2'
 
 
 const Projects = () => {
     return (
-        <section className="md:mx-14 mx-8 my-20">
+        <section className="md:mx-14 mx-8 my-40">
             <div className='max-w-5xl mx-auto text-left text-accent py-4 px-6 sm:px-4 lg:px-10'>
                 <div className='flex items-center space-x-8 mb-6'>
                     <h2 className="text-secondary text-2xl font-mono">
@@ -24,11 +26,12 @@ const Projects = () => {
                     {ProjectList.map((project, index) => {
                         return (
                             <FadeInScroll key={index}>
-                                {project.type === 'right' ? (
+                                {/* {project.type === 'right' ? (
                                     <ProjectCardMdRight dataProject={project.data} />
                                 ) : (
                                     <ProjectCardMdLeft dataProject={project.data} />
-                                )}
+                                )} */}
+                                <ProjectCardMdV2 dataProject={project.data} reverse={index % 2 !== 0} />
                             </FadeInScroll>
                         )
                     })}
@@ -37,7 +40,8 @@ const Projects = () => {
                     {ProjectList.map((project, index) => {
                         return (
                             <FadeInScroll key={index}>
-                                <ProjectCard dataProject={project.data} />
+                                {/* <ProjectCard dataProject={project.data} /> */}
+                                <ProjectCardV2 dataProject={project.data} />
                             </FadeInScroll>
                         )
                     })}

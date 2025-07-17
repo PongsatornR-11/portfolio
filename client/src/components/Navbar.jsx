@@ -40,7 +40,7 @@ const Navbar = forwardRef((props, ref) => {
     >
       <div className="px-2 py-1 flex justify-between items-center mx-4">
 
-        <a href="#">
+        <a href="\#">
           <FadeIn
             delay={0}
             duration={500}

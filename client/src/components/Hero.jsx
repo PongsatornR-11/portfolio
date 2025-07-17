@@ -1,7 +1,31 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import FadeIn from './style/FadeIn'
 import Button from './utils/Button'
 import FancyLink from './style/FancyLink'
+
+const Typewriter = ({ text, delay }) => {
+    const [currentText, setCurrentText] = useState('');
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        if (currentIndex < text.length) {
+            const timeout = setTimeout(() => {
+                setCurrentText(prevText => prevText + text[currentIndex]);
+                setCurrentIndex(prevIndex => prevIndex + 1);
+            }, delay);
+            return () => clearTimeout(timeout);
+        } else if (currentIndex === text.length) {
+            // Loop back to start after a pause
+            const loopTimeout = setTimeout(() => {
+                setCurrentText('');
+                setCurrentIndex(0);
+            }, 2000); // Pause at the end of typing
+            return () => clearTimeout(loopTimeout);
+        }
+    }, [currentIndex, delay, text]);
+
+    return <span>{currentText}<span className="typing-cursor"></span></span>;
+};
 
 const Hero = () => {
     const heroComponents = [
@@ -14,7 +38,7 @@ const Hero = () => {
         {
             name: 'MainHeading',
             element: <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-accent leading-tight mb-4">
-                Pongsatorn ( Bass )
+                Pongsatorn R. ( Bass )
             </h1>
         },
         {
@@ -30,12 +54,18 @@ const Hero = () => {
             </p>
         },
         {
+            name: 'LookingFor',
+            element: <p className="text-gray-400 text-lg leading-relaxed max-w-xl mb-12">
+                I'm currently looking for new opportunities as a Full Stack Software Engineer.
+            </p>
+        },
+        {
             name: 'Button',
             element:
                 <a href='#projects'>
                     <Button className="border-2 border-secondary text-secondary px-8 py-4 rounded-md text-lg font-mono hover:bg-opacity-10 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50">
                         <FancyLink>
-                            Check out my Projects!
+                            <Typewriter text='Check out my Projects!' delay={50}/>
                         </FancyLink>
                     </Button>
                 </a>
