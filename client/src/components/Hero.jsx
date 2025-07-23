@@ -1,31 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import FadeIn from './style/FadeIn'
 import Button from './utils/Button'
 import FancyLink from './style/FancyLink'
+import TypeWriter from './utils/TypeWriter';
 
-const Typewriter = ({ text, delay }) => {
-    const [currentText, setCurrentText] = useState('');
-    const [currentIndex, setCurrentIndex] = useState(0);
-
-    useEffect(() => {
-        if (currentIndex < text.length) {
-            const timeout = setTimeout(() => {
-                setCurrentText(prevText => prevText + text[currentIndex]);
-                setCurrentIndex(prevIndex => prevIndex + 1);
-            }, delay);
-            return () => clearTimeout(timeout);
-        } else if (currentIndex === text.length) {
-            // Loop back to start after a pause
-            const loopTimeout = setTimeout(() => {
-                setCurrentText('');
-                setCurrentIndex(0);
-            }, 2000); // Pause at the end of typing
-            return () => clearTimeout(loopTimeout);
-        }
-    }, [currentIndex, delay, text]);
-
-    return <span>{currentText}<span className="typing-cursor"></span></span>;
-};
 
 const Hero = () => {
     const heroComponents = [
@@ -65,7 +43,7 @@ const Hero = () => {
                 <a href='#projects'>
                     <Button className="border-2 border-secondary text-secondary px-8 py-4 rounded-md text-lg font-mono hover:bg-opacity-10 transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-opacity-50">
                         <FancyLink>
-                            <Typewriter text='Check out my Projects!' delay={50}/>
+                            <TypeWriter text='Check out my Projects!' delay={50} initialDelay={3400} />
                         </FancyLink>
                     </Button>
                 </a>
@@ -77,7 +55,7 @@ const Hero = () => {
                 {
                     heroComponents.map((heroComponent, index) => {
                         return (
-                            <FadeIn key={index} delay={index * 300 + 2000} duration={400} translateY='1rem'>
+                            <FadeIn key={index} delay={index * 200 + 2000} duration={400} translateY='1rem'>
                                 {heroComponent.element}
                             </FadeIn>
                         )

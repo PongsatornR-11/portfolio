@@ -25,7 +25,7 @@ const ProjectCardV2 = ({ dataProject }) => {
                 <div>
                     <ul className="flex flex-wrap gap-2 text-xs mb-4">
                         {technologies.map((tech, i) => (
-                            <li key={i} className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full">{tech}</li>
+                            <li key={i} className="px-2 py-1 bg-primary text-accent border border-secondary rounded-full">{tech}</li>
                         ))}
                     </ul>
                     <div className='flex justify-end space-x-4'>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaReact, FaNodeJs, FaDatabase, FaServer, FaCode, FaLink, FaGithub } from 'react-icons/fa';
 import { SiExpress, SiTailwindcss, SiVite, SiSocketdotio, SiSystem76 } from 'react-icons/si';
+import ImageModal from '../utils/ImageModal';
 
 const TechIcon = ({ icon, label }) => (
   <div className="flex items-center space-x-2 bg-gray-200 dark:bg-neutral px-3 py-1 rounded-full">
@@ -102,19 +103,20 @@ const ProjectShowcase = ({ DataProject }) => {
       <div className="bg-white dark:bg-neutral rounded-lg shadow-lg p-6 mb-8">
         <h3 className="text-2xl font-bold mb-4 flex items-center"><FaReact className="mr-3 text-secondary" />{frontend.title}</h3>
         <div className="md:col-span-2 mb-6">
-            <h4 className="text-xl font-semibold mb-3">Tech Stack</h4>
-            <div className="flex flex-wrap gap-3">
-              {frontend.techStack.map((tech, index) => (
-                <TechIcon key={index} icon={techIconMap[tech]} label={tech} />
-              ))}
-            </div>
+          <h4 className="text-xl font-semibold mb-3">Tech Stack</h4>
+          <div className="flex flex-wrap gap-3">
+            {frontend.techStack.map((tech, index) => (
+              <TechIcon key={index} icon={techIconMap[tech]} label={tech} />
+            ))}
           </div>
+        </div>
         <div>
           <h4 className="text-xl font-semibold mb-4 text-center">{frontend.screenshots.title}</h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {frontend.screenshots.images.map((_, i) => (
-              <div key={i} className="w-full h-40 bg-gray-200 dark:bg-primary rounded-lg flex items-center justify-center border-2 border-dashed border-neutral hover:border-secondary transition-all">
-                <span className="text-accent">Page {i + 1}</span>
+              <div key={i} className="w-full h-full bg-gray-200 dark:bg-primary rounded-lg flex items-center justify-center border-2 border-dashed border-neutral hover:border-secondary transition-all">
+                {/* <span className="text-accent">Page {i + 1}</span> */}
+                <ImageModal src={_.src} />
               </div>
             ))}
           </div>

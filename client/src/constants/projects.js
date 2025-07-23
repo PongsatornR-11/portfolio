@@ -3,8 +3,8 @@ export const ProjectList = [
         type: 'right',
         data: {
             title: 'Ecommerce Shopping Website',
-            description: 'A minimal, dark blue theme foadsfafdsafdsr VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm ',
-            technologies: ['Node.js (Express)', 'React', 'MySQL', 'Prisma', 'Cloudinary'],
+            description: 'A full-stack e-commerce platform built with React, Node.js (Express), MySQL (Prisma), and integrated with Cloudinary for image management and Stripe for payments. It features user authentication, product browsing, shopping cart functionality, and an admin panel for product and category management.',
+            technologies: ['Node.js (Express)', 'React', 'MySQL', 'Prisma', 'Cloudinary', 'Stripe', 'Tailwind CSS'],
             image: '/projectPics/ecommerce/Screenshot Ecommerce Project.jpg',
             images: [
                 { src: '/projectPics/ecommerce/Screenshot Ecommerce Project.jpg' },

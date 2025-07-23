@@ -1,44 +1,51 @@
 export const showcaseProjects = [
     {
         header: {
-            title: "Web Project Showcase 1",
-            subtitle: "A comprehensive overview of the MERN stack application I built.",
+            title: "Ecommerce Shopping Website",
+            subtitle: "A full-stack e-commerce platform built with the MERN stack.",
         },
         overview: {
             title: "Project Overview",
-            description: "This project is a real-time system monitoring dashboard that provides live insights into CPU, memory, disk, and network usage. It's designed to be a powerful tool for developers and system administrators.",
+            description: "A comprehensive e-commerce shopping website enabling users to browse products, add to cart, and complete purchases. It features an admin panel for product and category management.",
             role: "Full-Stack Developer",
             features: [
-                "Real-time data updates with WebSockets",
-                "Interactive charts and graphs",
-                "Responsive design for all devices",
-                "Theming with light and dark modes",
+                "User authentication and authorization",
+                "Product browsing and search",
+                "Shopping cart functionality",
+                "Order management for users and admins",
+                "Admin panel for product and category CRUD operations",
+                "Image uploads with Cloudinary",
+                "Payment integration",
             ],
             links: {
-                live: "#",
-                source: "#",
+                live: "https://ecommerce-pongsatorn.vercel.app/",
+                source: "https://github.com/PongsatornR-11/Ecommerce",
             },
         },
         backend: {
             title: "Back-end",
-            summary: "The back-end is a Node.js application using Express.js to provide a RESTful API. It uses `systeminformation` to gather system data and `Socket.io` to push real-time updates to the client.",
+            summary: "The back-end is built with Node.js and Express.js, providing RESTful APIs for product, user, order, and category management. It uses Prisma as an ORM for MySQL and Cloudinary for image storage.",
             database: {
-                title: "Database Diagram",
-                description: "NoSQL - Real-time data, no persistent storage",
+                title: "Database",
+                description: "MySQL with Prisma ORM",
             },
-            techStack: ["Node.js", "Express.js", "Socket.io", "systeminformation"],
+            techStack: ["Node.js", "Express.js", "MySQL", "Prisma", "Cloudinary"],
         },
         frontend: {
             title: "Front-end",
-            techStack: ["React", "Vite", "Tailwind CSS", "Recharts"],
+            techStack: ["React", "Vite", "Tailwind CSS"],
             screenshots: {
                 title: "Page Screenshots",
-                images: Array(6).fill({}),
+                images: [
+                    { src: "/projectPics/ecommerce/Screenshot Ecommerce Project.jpg" },
+                    { src: "/projectPics/ecommerce/Screenshot Ecommerce Project_2.jpg" },
+                    { src: "/projectPics/ecommerce/Screenshot Ecommerce Project_3.jpg" }
+                ],
             },
         },
         challenges: {
             title: "Challenges & Solutions",
-            description: "One challenge was efficiently handling real-time data updates without overwhelming the client. I implemented a solution using `use-debounce` to control the frequency of updates and `Zustand` for efficient state management, ensuring a smooth user experience even with high-frequency data streams.",
+            description: "One challenge was implementing secure user authentication and authorization, which was solved using JWTs and middleware. Another was handling image uploads efficiently, addressed by integrating Cloudinary for storage and delivery.",
         },
     },
     {

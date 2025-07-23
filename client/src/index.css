@@ -5,19 +5,65 @@ html {
 }
 
 
-@theme{
+@theme {
     --color-primary: #0a192f;
     --color-secondary: #64ffda;
     --color-accent: #ccd6f6;
-    --color-neutral : #233554;
+    --color-neutral: #233554;
 }
 
+/* for TypeWriter.jsx */
 .typing-cursor {
     border-right: 2px solid;
     animation: blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--color-secondary); }
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--color-secondary);
+    }
+}
+
+
+
+
+/* for ImageModel.jsx */
+
+/* Fade in for the background */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Zoom in for the image */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Utility classes */
+.animate-fadeIn {
+    animation: fadeIn 0.2s ease-out;
+}
+
+.animate-zoomIn {
+    animation: zoomIn 0.2s ease-out;
 }

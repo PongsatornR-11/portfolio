@@ -29,7 +29,7 @@ const ProjectCardMdV2 = ({ dataProject, reverse = false }) => {
             </div>
             <ul className={`flex flex-wrap gap-2 text-sm ${reverse ? 'md:justify-end' : 'md:justify-start'}`}>
                 {technologies.map((tech, i) => (
-                    <li key={i}>{tech}</li>
+                    <li key={i} className='border p-1 rounded-md text-secondary border-secondary'>{tech}</li>
                 ))}
             </ul>
             <div className='flex gap-4 mt-4'>
