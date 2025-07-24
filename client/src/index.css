@@ -4,13 +4,30 @@ html {
     scroll-behavior: smooth;
 }
 
-
+/* dark theme */
 @theme {
     --color-primary: #0a192f;
+    --color-neutral: #233554;
     --color-secondary: #64ffda;
     --color-accent: #ccd6f6;
-    --color-neutral: #233554;
 }
+
+/* light theme */
+/* @theme {
+    --color-primary: #F0F5F9;
+    --color-neutral: #C9D6DF;
+    --color-secondary: #52616B;
+    --color-accent: #1E2022;
+} */
+
+/* dark theme 2 */
+/* @theme {
+    --color-primary: #222831;
+    --color-neutral: #393E46;
+    --color-secondary: #00ADB5;
+    --color-accent: #EEEEEE;
+} */
+
 
 /* for TypeWriter.jsx */
 .typing-cursor {

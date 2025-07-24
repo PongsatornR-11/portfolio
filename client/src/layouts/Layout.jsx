@@ -7,6 +7,7 @@ import ContactFix from '../components/utils/ContactFix'
 import MailtoFix from '../components/utils/MailtoFix'
 import BackToTop from '../components/utils/BackToTop'
 import ContactSmall from '../components/utils/ContactSmall'
+import ThemeSwitcher from '../components/utils/ThemeSwitcher'
 
 const Layout = () => {
     const navbarRef = useRef(null)
@@ -27,6 +28,7 @@ const Layout = () => {
             <MailtoFix email={'pongsatorn.rk@gmail.com'} />
             <ContactSmall />
             <BackToTop />
+            <ThemeSwitcher />
         </Loading>
     )
 }

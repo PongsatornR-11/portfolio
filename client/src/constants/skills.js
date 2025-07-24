@@ -23,6 +23,7 @@ export const skills = [
     name: 'Next.js', href: 'https://nextjs.org', description: 'Next.js is an open-source web development framework built on top of React, enabling React-based web applications with server-side rendering and static site generation capabilities.'
     , icon: 'nextjs2'
   },
+  { name: 'RESTful APIs', href: 'https://restfulapi.net/', description: 'RESTful APIs are a set of architectural principles for designing web services that use HTTP requests to access and use data.' },
   { name: 'Responsive Design', href: 'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design', description: 'Responsive web design is an approach to web design that makes web pages render well on a variety of devices and window or screen sizes.' },
   {
     name: 'Node.js', href: 'https://nodejs.org', description: 'Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that executes JavaScript code outside a web browser.'
@@ -32,7 +33,6 @@ export const skills = [
     name: 'Express.js', href: 'https://expressjs.com', description: 'Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.'
     , icon: 'expressjs'
   },
-  { name: 'RESTful APIs', href: 'https://restfulapi.net/', description: 'RESTful APIs are a set of architectural principles for designing web services that use HTTP requests to access and use data.' },
   {
     name: 'MySQL', href: 'https://www.mysql.com', description: 'MySQL is an open-source relational database management system (RDBMS) that uses Structured Query Language (SQL).'
     , icon: 'mysql'
