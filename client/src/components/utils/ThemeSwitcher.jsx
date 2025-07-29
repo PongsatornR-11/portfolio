@@ -13,18 +13,9 @@ const ThemeSwitcher = () => {
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const htmlElement = document.documentElement;
-            if (theme === 'light') {
-                htmlElement.classList.add('light-theme');
-                htmlElement.classList.remove('dark-theme-1'); // Remove if previously set
-            } else if (theme === 'dark-theme-1') {
-                htmlElement.classList.add('dark-theme-1');
-                htmlElement.classList.remove('light-theme');
-            } else {
-                // Default dark theme (dark theme 2)
-                htmlElement.classList.remove('light-theme');
-                htmlElement.classList.remove('dark-theme-1');
-            }
+            htmlElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
+            console.log(theme)
         }
     }, [theme]);
 
@@ -32,6 +23,7 @@ const ThemeSwitcher = () => {
         setTheme(prevTheme => {
             if (prevTheme === 'dark') return 'light';
             if (prevTheme === 'light') return 'dark-theme-1';
+            if (prevTheme === 'dark-theme-1') return 'light-theme-1';
             return 'dark'; // Cycle back to default dark
         });
     };
@@ -39,10 +31,10 @@ const ThemeSwitcher = () => {
     return (
         <button
             onClick={toggleTheme}
-            className="fixed top-24 right-4 p-3 rounded-full bg-neutral text-accent shadow-lg z-50 hover:scale-110 transition-transform duration-200"
+            className="fixed top-24 right-4 p-3 rounded-full bg-neutral text-accent shadow-lg z-50 hover:scale-110 transition-transform duration-400"
             aria-label="Toggle theme"
         >
-            {theme === 'light' ? <Moon size={24} /> : <Sun size={24} />}
+            {theme === ('light'|| 'light-theme-1') ? <Sun size={24} /> : <Moon size={24} />}
         </button>
     );
 };

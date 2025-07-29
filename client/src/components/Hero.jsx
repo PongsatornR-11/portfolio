@@ -50,7 +50,7 @@ const Hero = () => {
         }
     ]
     return (
-        <section className='md:mx-14 pt-4 mx-8 h-[80vh] mt-30'>
+        <section className='md:mx-14 pt-4 mx-8 h-[70vh] mt-30 mb-20'>
             <div className="max-w-5xl mx-auto text-left py-4 px-6 sm:px-4 lg:px-10">
                 {
                     heroComponents.map((heroComponent, index) => {

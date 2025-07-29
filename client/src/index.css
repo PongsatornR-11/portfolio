@@ -4,7 +4,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* dark theme */
 @theme {
     --color-primary: #0a192f;
     --color-neutral: #233554;
@@ -12,21 +11,26 @@ html {
     --color-accent: #ccd6f6;
 }
 
-/* light theme */
-/* @theme {
+[data-theme="light"] {
     --color-primary: #F0F5F9;
     --color-neutral: #C9D6DF;
     --color-secondary: #52616B;
     --color-accent: #1E2022;
-} */
+}
 
-/* dark theme 2 */
-/* @theme {
+[data-theme="dark-theme-1"] {
     --color-primary: #222831;
     --color-neutral: #393E46;
     --color-secondary: #00ADB5;
     --color-accent: #EEEEEE;
-} */
+}
+
+[data-theme="light-theme-1"] {
+    --color-primary: #FFFBDE;
+    --color-neutral: #91C8E4;
+    --color-secondary: #749BC2;
+    --color-accent: #4682A9;
+}
 
 
 /* for TypeWriter.jsx */

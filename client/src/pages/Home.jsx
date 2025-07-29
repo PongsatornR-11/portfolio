@@ -9,6 +9,7 @@ import Experience from '../components/Experience'
 import Projects from '../components/Projects'
 import ContactSection from '../components/ContactSection'
 import Skills from '../components/Skills'
+import Reference from '../components/Reference'
 
 const Sections = [
   { id: 'about', element: <About /> },
@@ -16,6 +17,7 @@ const Sections = [
   { id: 'experience', element: <Experience /> },
   { id: 'projects', element: <Projects /> },
   { id: 'contact', element: <ContactSection /> },
+  { id: 'Reference', element: <Reference /> },
 ]
 
 

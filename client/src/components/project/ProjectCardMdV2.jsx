@@ -8,7 +8,7 @@ import ImageHover from '../style/ImageHover';
 import FancyLink from '../style/FancyLink.jsx';
 
 const TechIcon = ({ icon, label }) => (
-    <div className="flex items-center space-x-1 bg-accent dark:bg-primary px-2 py-1 rounded-full text-sm">
+    <div className="flex items-center space-x-1 bg-accent dark:bg-primary border border-accent py-1 px-2 rounded-full text-sm select-none">
         {icon}
         <span>{label}</span>
     </div>

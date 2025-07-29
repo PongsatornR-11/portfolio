@@ -28,7 +28,7 @@ const BackToTop = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-5 w-full z-50 flex justify-center items-center">
+    <div className="fixed bottom-12 w-full z-50 flex justify-center items-center">
       {isVisible && (
         <button
           onClick={scrollToTop}
