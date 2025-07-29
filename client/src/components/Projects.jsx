@@ -1,13 +1,16 @@
 import React from 'react'
-import { ProjectCardMdLeft, ProjectCardMdRight } from './project/ProjectCardMd'
-import FadeInScroll from './style/FadeInScroll'
+
 import ProjectCard from './project/ProjectCard'
 import ProjectGrid from './project/ProjectGrid'
 import FancyLink from './style/FancyLink'
 
-import { ProjectList } from '../constants/projects'
+
 import ProjectCardMdV2 from './project/ProjectCardMdV2'
 import ProjectCardV2 from './project/ProjectCardV2'
+
+import FadeInScroll from './style/FadeInScroll'
+
+import { ProjectList } from '../constants/projects'
 
 
 const Projects = () => {

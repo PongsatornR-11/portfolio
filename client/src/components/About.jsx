@@ -34,8 +34,8 @@ const About = () => {
                                     skills.slice(0, 8).map((techStack, index) => {
                                         return (
                                             <li key={index} className='flex'>
-                                                <div className='flex gap-2'>
-                                                    <TechStackIcon name={techStack.iconName} />
+                                                <div className='flex gap-2 my-1'>
+                                                    <TechStackIcon name={techStack.icon} />
                                                     <span>{techStack.name}</span>
                                                 </div>
                                             </li>

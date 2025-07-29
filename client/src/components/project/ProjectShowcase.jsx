@@ -1,7 +1,7 @@
 import React from 'react';
-import { FaReact, FaNodeJs, FaDatabase, FaServer, FaCode, FaLink, FaGithub } from 'react-icons/fa';
-import { SiExpress, SiTailwindcss, SiVite, SiSocketdotio, SiSystem76 } from 'react-icons/si';
+import { FaServer, FaLink, FaGithub, FaReact, FaDatabase } from 'react-icons/fa';
 import ImageModal from '../utils/ImageModal';
+import { techIconMap } from '../icons/techIcons.jsx';
 
 const TechIcon = ({ icon, label }) => (
   <div className="flex items-center space-x-2 bg-gray-200 dark:bg-neutral px-3 py-1 rounded-full">
@@ -13,22 +13,7 @@ const TechIcon = ({ icon, label }) => (
 const ProjectShowcase = ({ DataProject }) => {
   const { header, overview, backend, frontend, challenges } = DataProject;
 
-  const techIconMap = {
-    "Node.js": <FaNodeJs className="text-green-500" />,
-    "Express.js": <SiExpress />,
-    "Socket.io": <SiSocketdotio className="text-black" />,
-    "systeminformation": <SiSystem76 className="text-blue-400" />,
-    "React": <FaReact className="text-blue-400" />,
-    "Vite": <SiVite className="text-purple-500" />,
-    "Tailwind CSS": <SiTailwindcss className="text-teal-400" />,
-    "Recharts": <FaCode />,
-    "Python": <FaCode />,
-    "Django": <FaCode />,
-    "PostgreSQL": <FaDatabase />,
-    "Vue.js": <FaCode />,
-    "Nuxt.js": <FaCode />,
-    "SCSS": <FaCode />,
-  };
+  
 
   return (
     <div className="mt-20 mx-20 bg-gray-50 dark:bg-primary text-gray-900 dark:text-accent p-4 sm:p-6 lg:p-8 shadow-2xl">

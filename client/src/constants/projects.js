@@ -2,6 +2,7 @@ export const ProjectList = [
     {
         type: 'right',
         data: {
+            id: "ecommerce-shopping-website",
             title: 'Ecommerce Shopping Website',
             description: 'A full-stack e-commerce platform built with React, Node.js (Express), MySQL (Prisma), and integrated with Cloudinary for image management and Stripe for payments. It features user authentication, product browsing, shopping cart functionality, and an admin panel for product and category management.',
             technologies: ['Node.js (Express)', 'React', 'MySQL', 'Prisma', 'Cloudinary', 'Stripe', 'Tailwind CSS'],
@@ -17,13 +18,14 @@ export const ProjectList = [
             ]
         }
     },
- 
+
     {
         type: 'left',
         data: {
+            id: "camping-website",
             title: 'Camping Website',
-            description: 'A personal portfolio website showcasing my projects and skills, built with React and Tailwind CSS.',
-            technologies: ['NextJS','React', 'TypeScript', 'Prisma', 'Supabase', 'Clerk', 'Shadcn'],
+            description: 'A web application for discovering and managing camping locations in Thailand. Users can browse, search, view details, save their favorite locations, and contribute by adding new ones. Features include user authentication with Clerk, an interactive map view with Leaflet, and detailed location pages with images and descriptions.',
+            technologies: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL', 'Clerk', 'Supabase', 'Tailwind CSS', 'Shadcn UI', 'Leaflet'],
             image: '/projectPics/camping/Screenshot camping Project.jpg',
             images: [
                 { src: '/projectPics/camping/Screenshot camping Project.jpg' },
@@ -34,16 +36,17 @@ export const ProjectList = [
             links:
                 [
                     { name: 'git', href: 'https://github.com/PongsatornR-11/camping' },
-                    { name: 'website', href: 'https://github.com/PongsatornR-11/portadsfsdfdsafolio' },
+                    { name: 'website', href: 'https://github.com/PongsatornR-11/camping' },
                 ]
         }
     },
     {
         type: 'right',
         data: {
+            id: "system-monitor",
             title: 'System Monitor for my raspberry Pi',
-            description: 'A personal portfolio website showcasing my projects and skills, built with React and Tailwind CSS.',
-            technologies: ['React', 'ExpressJS', 'SystemInformation', 'TailwindCSS', 'Cloudflared', 'PM2'],
+            description: 'A full-stack application that provides a web-based interface to monitor the system resource usage of a Raspberry Pi in real-time. It displays detailed information about CPU, memory, and network, with interactive charts and a clean, modern UI.',
+            technologies: ['React', 'Express.JS', 'SystemInformation', 'Tailwind CSS', 'Cloudflared', 'PM2'],
             image: '/projectPics/system_monitor/Screenshot Systemmonitor Project.jpg',
             images: [
                 { src: '/projectPics/system_monitor/Screenshot Systemmonitor Project.jpg' },
