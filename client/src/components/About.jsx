@@ -31,7 +31,7 @@ const About = () => {
                             <h3 className="text-secondary font-semibold mt-4 mb-2">Technologies I've been working with recently:</h3>
                             <ul className="list-disc list-inside grid grid-cols-2 gap-1">
                                 {
-                                    skills.map((techStack, index) => {
+                                    skills.slice(0, 8).map((techStack, index) => {
                                         return (
                                             <li key={index} className='flex'>
                                                 <div className='flex gap-2'>
