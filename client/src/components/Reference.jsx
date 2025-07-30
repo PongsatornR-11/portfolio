@@ -6,7 +6,7 @@ const Reference = () => {
         <div className='mx-auto flex gap-2 text-sm text-accent mb-5 justify-center items-center'>
             <div>
                 <span>
-                    Inspried
+                    Inspired
                 </span>
                 <a href="https://github.com/bchiang7/v4">
                     <FancyLink>

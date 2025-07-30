@@ -51,7 +51,7 @@ const About = () => {
                         <div className="relative w-64 group ">
 
                             <ImageHover
-                                src="/mountain-3.jpg"
+                                src="/PongsatornR_Pic.jpg"
                                 alt="Hover Image"
                                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1 z-10"
                             />

@@ -28,7 +28,7 @@ const Home = () => {
       {
         Sections.map((section, index) => {
           return (
-            <FadeInScroll key={index}>
+            <FadeInScroll key={index} threshold={0.3}>
               <section id={section.id}>
                 {section.element}
               </section>

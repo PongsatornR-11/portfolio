@@ -28,7 +28,7 @@ const Projects = () => {
                 <div className='hidden md:block'>
                     {ProjectList.map((project, index) => {
                         return (
-                            <FadeInScroll key={index}>
+                            <FadeInScroll key={index} threshold={0.25}>
                                 {/* {project.type === 'right' ? (
                                     <ProjectCardMdRight dataProject={project.data} />
                                 ) : (
@@ -42,7 +42,7 @@ const Projects = () => {
                 <div className='md:hidden'>
                     {ProjectList.map((project, index) => {
                         return (
-                            <FadeInScroll key={index}>
+                            <FadeInScroll key={index} threshold={0.25}>
                                 {/* <ProjectCard dataProject={project.data} /> */}
                                 <ProjectCardV2 dataProject={project.data} />
                             </FadeInScroll>
