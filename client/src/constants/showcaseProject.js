@@ -19,7 +19,7 @@ export const showcaseProjects = [
                 "Payment integration",
             ],
             links: {
-                live: "https://ecommerce-pongsatorn.vercel.app/",
+                live: "https://ecom.mypiserviceshub.com/",
                 source: "https://github.com/PongsatornR-11/Ecommerce",
             },
         },
@@ -27,8 +27,9 @@ export const showcaseProjects = [
             title: "Back-end",
             summary: "The back-end is built with Node.js and Express.js, providing RESTful APIs for product, user, order, and category management. It uses Prisma as an ORM for MySQL and Cloudinary for image storage.",
             database: {
-                title: "Database",
+                title: "Database Schema",
                 description: "MySQL with Prisma ORM",
+                image: "/projectPics/ecommerce/Database Ecommerce Project.jpg"
             },
             techStack: ["Node.js", "Express.js", "MySQL", "Prisma", "Cloudinary"],
         },
@@ -132,6 +133,7 @@ export const showcaseProjects = [
             database: {
                 title: "Database",
                 description: "PostgreSQL with Prisma ORM",
+                image: "/projectPics/camping/Database Camping Project.jpg"
             },
             techStack: ["Next.js", "Prisma", "PostgreSQL", "Clerk", "Supabase"],
         },

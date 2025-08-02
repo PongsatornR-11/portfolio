@@ -14,7 +14,7 @@ export const ProjectList = [
             ],
             links: [
                 { name: 'git', href: 'https://github.com/PongsatornR-11/Ecommerce' },
-                { name: 'website', href: 'https://ecommerce-pongsatorn.vercel.app/' }
+                { name: 'website', href: 'https://ecom.mypiserviceshub.com/' }
             ]
         }
     },

@@ -13,7 +13,7 @@ const TechIcon = ({ icon, label }) => (
 const ProjectShowcase = ({ DataProject }) => {
   const { header, overview, backend, frontend, challenges } = DataProject;
 
-  
+
 
   return (
     <div className="mt-20 mx-20 bg-gray-50 dark:bg-primary text-gray-900 dark:text-accent p-4 sm:p-6 lg:p-8 shadow-2xl">
@@ -68,10 +68,18 @@ const ProjectShowcase = ({ DataProject }) => {
           </div>
           <div>
             <h4 className="text-xl font-semibold mb-2">{backend.database.title}</h4>
-            <div className="w-full h-48 bg-gray-200 dark:bg-primary rounded-md flex items-center justify-center border-2 border-dashed border-neutral">
-              <FaDatabase className="text-4xl text-accent" />
-              <span className="ml-4 text-accent">{backend.database.description}</span>
-            </div>
+
+            {
+              backend.database.image ?
+                <div className="w-full bg-gray-200 dark:bg-primary rounded-md flex items-center justify-center border-2 border-dashed border-neutral">
+                  <ImageModal src={backend.database.image} />
+                </div>
+                :
+                <div className="w-full h-48 bg-gray-200 dark:bg-primary rounded-md flex items-center justify-center border-2 border-dashed border-neutral">
+                  <FaDatabase className="text-4xl text-accent" />
+                  <span className="ml-4 text-accent">{backend.database.description}</span>\
+                </div>
+            }
           </div>
           <div className="md:col-span-2">
             <h4 className="text-xl font-semibold mb-3">Tech Stack</h4>
